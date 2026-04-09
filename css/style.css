@@ -1,0 +1,182 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding-top: 60px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.cabecalho{
+    height: 100%;
+    padding: 0 80px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: #0C141D;
+    z-index: 100;
+}
+#btnVoltarAoTopo{
+    cursor: pointer;
+    color: white;
+}
+#btnsHeader{
+    color: rgb(210, 210, 210);
+    display: flex;
+    justify-content: right;
+    gap: 38px;
+    height: 100%;
+    align-items: center;
+}
+.btnsHeader{
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#SolicitarProposta {
+    color: white;
+    background-color: #018AB0;
+    border-radius: 10px;
+    border: none;
+    padding: 8px 20px;
+}
+
+.hero {
+    height: 120vh;
+    min-height: 100vh;
+    background-image: linear-gradient(to right, rgba(0, 30, 60, 0.836), rgba(0, 30, 60, 0.589)), url('../IMG/imagem1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;              
+    align-items: center;
+    gap: 110px;
+}
+.container {
+    max-width: 1200px;
+    margin:  auto;
+    padding: 30px 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    
+}
+ 
+.heroContent {
+    max-width: 670px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#SubTitulo{
+    color: #00c8ff;
+    background-color: #018ab060;
+    padding: 3px 10px;
+    margin: 0;
+    width: 290px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 15px;
+    border:1px solid #00c8ff;
+}
+.heroContent h1 {
+    font-size: 68px;
+
+}
+.heroContent span{
+    font-size: 20px;
+}
+#HeroTitulo{
+    color: #018AB0;
+    font-size: 68px;
+}
+
+.BtnHero{
+    display:flex;
+    gap: 15px;
+}
+
+.BtnHero-Proposta {
+    color: white;
+    background-color: #018AB0;
+    border: none;
+    padding: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 190px;
+    font-weight: 700;
+}
+
+.BtnHero-Servico {
+    color: white;
+    background-color:transparent;
+    border:1.5px solid rgb(210, 210, 210);;
+    padding: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 190px;
+    font-weight: 700;
+}
+
+.heroInfo{
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+.heroInfo span{
+    padding: 25px;
+    width: 25%;
+    gap: 100px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.08); 
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.QuemSomos{
+    padding: 100px 80px;
+    
+}
+
+.QuemSomos-container{
+    display: flex;
+    gap: 100px;
+}
+.QuemSomos-imagem img {
+    width: 100%;
+    max-width: 550px;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+}
+.QuemSomos-texto{
+    display: flex;
+    justify-content: center;
+    color:#018AB0;
+    font-weight: 600;
+}
+
+footer{
+    background-color: #0C141D;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
