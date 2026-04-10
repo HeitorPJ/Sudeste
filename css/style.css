@@ -15,22 +15,26 @@ body{
   font-weight: 400;
   font-style: normal;
 }
-.cabecalho{
-    height: 100%;
-    padding: 0 80px;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 header{
+    
     top: 0;
     position: fixed;
     width: 100%;
     height: 60px;
-    background-color: #0C141D;
+    background-color: #0B151E;
     z-index: 100;
+
 }
+.cabecalho{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+    padding: 0 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 #btnVoltarAoTopo{
     cursor: pointer;
     color: white;
@@ -57,16 +61,17 @@ header{
 }
 
 .hero {
-    height: 120vh;
     min-height: 100vh;
     background-image: linear-gradient(to right, rgba(0, 30, 60, 0.836), rgba(0, 30, 60, 0.589)), url('../IMG/imagem1.jpg');
     background-size: cover;
     background-position: center;
     color: white;
     display: flex;              
-    align-items: center;
-    gap: 110px;
+    align-items: flex-start;
+    
+    
 }
+
 .container {
     max-width: 1200px;
     margin:  auto;
@@ -75,26 +80,31 @@ header{
     display: flex;
     flex-direction: column;
     gap: 50px;
-    
+    justify-content: flex-start
 }
  
 .heroContent {
-    max-width: 670px;
+    width: 56%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
+}
+
+.heroInfo span {
+    width: 100%;
 }
 #SubTitulo{
     color: #00c8ff;
-    background-color: #018ab060;
+    background-color: #005e79;
     padding: 3px 10px;
     margin: 0;
     width: 290px;
     display: flex;
     justify-content: center;
-    border-radius: 10px;
+    border-radius: 12px;
     font-size: 15px;
     border:1px solid #00c8ff;
+    backdrop-filter: blur(10px);
 }
 .heroContent h1 {
     font-size: 68px;
@@ -118,7 +128,7 @@ header{
     background-color: #018AB0;
     border: none;
     padding: 16px;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     width: 190px;
     font-weight: 700;
@@ -129,7 +139,7 @@ header{
     background-color:transparent;
     border:1.5px solid rgb(210, 210, 210);;
     padding: 16px;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     width: 190px;
     font-weight: 700;
@@ -158,6 +168,8 @@ header{
 .QuemSomos-container{
     display: flex;
     gap: 100px;
+     max-width: 1200px;
+    margin: auto;
 }
 .QuemSomos-imagem img {
     width: 100%;
@@ -168,11 +180,48 @@ header{
     border-radius: 12px;
 }
 .QuemSomos-texto{
+    width: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    flex-direction: column;
+    font-weight: 600;
+    align-items: flex-start;
+
+}
+.QuemSomos-texto-titulo{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+#QuemSomos-texto-subtitulo{
     color:#018AB0;
     font-weight: 600;
+    font-size: 16px;
+
 }
+#QuemSomos-titulo-titulo{
+    font-size: 40px;
+    color: #0B151E;
+}
+
+#QuemSomos-texto-desc{
+    color: #75838A;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 16px;
+}
+
+.QuemSomos-texto-info{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: #0B151E;
+    font-weight: 500;
+    font-size: 16px;
+
+}
+
 
 footer{
     background-color: #0C141D;
