@@ -4,8 +4,14 @@ function voltarAoTopo() {
                 behavior: 'smooth'
             });}
 
-function btnQuemSomos() {
-    document.getElementById("QuemSomos-js").scrollIntoView({
+function IrQuemSomos() {
+    document.getElementById("QuemSomos-id").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+function IrServicos() {
+    document.getElementById("servicos-id").scrollIntoView({
         behavior: "smooth"
     });
 }

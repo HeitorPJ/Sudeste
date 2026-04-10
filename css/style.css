@@ -2,6 +2,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -95,10 +96,8 @@ header{
     gap: 30px;
 }
 
-.heroInfo span {
-    width: 100%;
-}
-#SubTitulo{
+
+#hero-SubTitulo{
     color: #00c8ff;
     background-color: #005e79;
     padding: 3px 10px;
@@ -162,8 +161,7 @@ header{
 }
 .heroInfo span{
     padding: 25px;
-    width: 25%;
-    gap: 100px;
+    width: 30%;
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.08); 
     backdrop-filter: blur(10px);
@@ -174,15 +172,15 @@ header{
 
 
 .QuemSomos{
-    padding: 100px 80px;
-    
+    padding: 100px 0px;
 }
 
 .QuemSomos-container{
     display: flex;
-    gap: 70px;
     max-width: 1200px;
+    gap: 70px;
     margin: auto;
+    padding: 0 80px;
 }
 
 /*---------------Quem-Somos-div-imagem---------------*/
@@ -248,7 +246,7 @@ header{
     font-size: 40px;
     color: #0B151E;
 }
-
+/*--------Quem-Somos-descricão--------*/ 
 #QuemSomos-texto-desc{
     color: rgb(81, 90, 95);
     font-weight: 400;
@@ -272,7 +270,111 @@ header{
     align-items: center;
     gap: 10px;
 }
-/*---------------Footer---------------*/
+
+/*-----------------------Titulos-gerais-----------------------*/
+.titulo-geral{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.subtitulo{
+    color:#018AB0;
+    font-weight: 600;
+    font-size: 16px;
+}
+.titulo{
+    font-size: 35px;
+    color: #0B151E;
+}
+.descricao{
+    color: rgb(81, 90, 95);
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 16px;
+    max-width: 600px;
+    text-align: center;
+}
+/*-----------------------Mapa-----------------------*/
+.mapa{
+    padding: 100px 0;
+}
+
+.mapa-container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 80px;
+}
+
+/*-----------------------servicos-----------------------*/
+
+.servicos{
+    padding: 100px 0px;
+
+    
+}
+
+.servicos-container{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 80px;
+}
+
+/*-----------------------servicos-card-----------------------*/
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0;
+    width: 100%;
+
+}
+.card{
+    width: 100%;
+    min-width: 0;
+}
+.card-container{
+    width: 100%;
+    padding: 10px; /* margem interna dos cards*/
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.356);
+    background-color: white;
+    display: flex;
+    flex-direction: column;     
+    gap: 100px;
+}
+.card-titulo{
+    font-size: 20px;
+    color: #0B151E;
+}
+.card-desc{
+    font-size: 15px;
+    color: rgb(81, 90, 95);
+
+}
+.card-btn{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;    
+}
+.card-btn-proposta{
+    color:#018AB0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.card-btn-saiba{
+    color:#018AB0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+/*-----------------------Footer-----------------------*/
 
 footer{
     background-color: #0C141D;
