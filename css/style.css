@@ -15,8 +15,8 @@ body{
   font-weight: 400;
   font-style: normal;
 }
+/*----------------Header---------------*/
 header{
-    
     top: 0;
     position: fixed;
     width: 100%;
@@ -34,6 +34,8 @@ header{
     justify-content: space-between;
     align-items: center;
 }
+
+/*--------Header-Botões--------*/ 
 
 #btnVoltarAoTopo{
     cursor: pointer;
@@ -60,6 +62,9 @@ header{
     padding: 8px 20px;
 }
 
+/*---------------Hero---------------*/
+
+
 .hero {
     min-height: 100vh;
     background-image: linear-gradient(to right, rgba(0, 30, 60, 0.836), rgba(0, 30, 60, 0.589)), url('../IMG/imagem1.jpg');
@@ -68,8 +73,6 @@ header{
     color: white;
     display: flex;              
     align-items: flex-start;
-    
-    
 }
 
 .container {
@@ -82,7 +85,9 @@ header{
     gap: 50px;
     justify-content: flex-start
 }
- 
+
+/*---------------Hero-div-content---------------*/ 
+
 .heroContent {
     width: 56%;
     display: flex;
@@ -118,6 +123,8 @@ header{
     font-size: 68px;
 }
 
+/*--------Hero-Botões--------*/ 
+
 .BtnHero{
     display:flex;
     gap: 15px;
@@ -145,6 +152,8 @@ header{
     font-weight: 700;
 }
 
+/*---------------Hero-div-info---------------*/ 
+
 .heroInfo{
     display: flex;
     justify-content: space-between;
@@ -160,6 +169,10 @@ header{
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.15);
 }
+
+/*---------------Quem-Somos---------------*/
+
+
 .QuemSomos{
     padding: 100px 80px;
     
@@ -171,6 +184,9 @@ header{
      max-width: 1200px;
     margin: auto;
 }
+
+/*---------------Quem-Somos-div-imagem---------------*/
+
 .QuemSomos-imagem img {
     width: 100%;
     max-width: 550px;
@@ -179,6 +195,9 @@ header{
     object-position: center;
     border-radius: 12px;
 }
+
+/*---------------Quem-Somos-div-texto---------------*/
+
 .QuemSomos-texto{
     width: 50%;
     display: flex;
@@ -206,11 +225,12 @@ header{
 }
 
 #QuemSomos-texto-desc{
-    color: #75838A;
+    color: rgb(81, 90, 95);
     font-weight: 400;
     line-height: 1.4;
     font-size: 16px;
 }
+/*--------Quem-Somos-infos--------*/ 
 
 .QuemSomos-texto-info{
     display: flex;
@@ -218,10 +238,16 @@ header{
     gap: 15px;
     color: #0B151E;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 15px;
 
 }
-
+.QuemSomos-info-imagem{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+}
+/*---------------Footer---------------*/
 
 footer{
     background-color: #0C141D;
