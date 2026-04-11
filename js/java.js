@@ -3,7 +3,11 @@ function voltarAoTopo() {
                 top: 0,
                 behavior: 'smooth'
             });}
-
+function IrClientes() {
+    document.getElementById("clientes-id").scrollIntoView({
+        behavior: "smooth"
+    });
+}
 function IrQuemSomos() {
     document.getElementById("QuemSomos-id").scrollIntoView({
         behavior: "smooth"
@@ -12,6 +16,11 @@ function IrQuemSomos() {
 
 function IrServicos() {
     document.getElementById("servicos-id").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+function IrPortifolio() {
+    document.getElementById("portifolio-id").scrollIntoView({
         behavior: "smooth"
     });
 }
