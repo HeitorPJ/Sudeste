@@ -110,6 +110,7 @@ header{
     font-size: 15px;
     border:1px solid #00c8ff;
     backdrop-filter: blur(10px);
+    font-weight: 600;
 }
 .heroContent h1 {
     font-size: 68px;
@@ -143,7 +144,7 @@ header{
 
 }
 .BtnHero-Proposta:hover {
-    transform: scale(1.02); /* Zoom quando o mouse passa*/
+
     box-shadow: 0 1px 5px rgba(255, 255, 255, 0.753)
 }
 
@@ -164,16 +165,34 @@ header{
 .heroInfo{
     display: flex;
     justify-content: space-between;
-    
-    
 }
-.heroInfo p{
-    padding: 25px;
+.heroinfo-geral{
+    display: flex;
+    justify-content: left;
+    padding: 20px;
     width: 30%;
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.08); 
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1.5px solid rgba(255, 255, 255, 0.253);
+    gap: 15px;
+}
+/*--------Hero-Info-Imagem--------*/ 
+.heroinfo-imagem img{
+    display: flex;
+    justify-content: center;
+    max-width: 50px;
+    background-color: #018ab05d;
+    padding: 10px;
+    border-radius: 10px;
+}
+/*--------Hero-Info-Texto--------*/ 
+.heroinfo-texto h1{
+    font-size: 25px;
+}
+.heroinfo-texto p{
+    font-size: 15px;
+    color: rgb(210, 210, 210);
 }
 
 /*---------------Clientes---------------*/
@@ -232,9 +251,6 @@ header{
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.555);
 
 }
-
-
-
 
 
 /*---------------Quem-Somos-div-texto---------------*/
@@ -358,6 +374,7 @@ header{
     width: 100%;
     min-width: 0;
     transition: transform 0.5s ease;
+    
 }
 .card-container{
     width: 100%;
@@ -444,14 +461,18 @@ header{
     color: white;
 }
 
+/*-----------------------Portifólio-----------------------*/
+
 .portifolio{
     padding: 100px 0px;
-    
+    gap: 70px;
 }
 .portifolio-container{
     max-width: 1350px;
     margin: auto;
-    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
 }
 
 .portifolio-grid{
@@ -460,10 +481,12 @@ header{
     gap:25px;
     max-width: 1350px;
     width: 100%;
-    margin: 40px auto;     /* CENTRALIZA */
+    margin: 40px auto;     
     padding: 0 80px; 
     
 }
+/*--------Portifólio-Imagem--------*/ 
+
 .portifolio-imagem{
     position: relative;
     overflow: hidden;
@@ -482,6 +505,8 @@ header{
     transition: transform 0.4s ease;
 
 }
+/*--------Portifólio-Overlay--------*/ 
+
 .overlay-texto{
     position: absolute;
     bottom: 20px;
@@ -510,6 +535,8 @@ header{
     font-size: 13px;
     border:1px solid #00c8ff;
 }
+/*--------Portifólio-hover--------*/ 
+
 .portifolio-imagem::after{
     content: "";
     position: absolute;
@@ -536,6 +563,40 @@ header{
     opacity: 1;
     transform: translateY(0);
 }
+
+/*--------Portifólio-Enviar--------*/ 
+
+.portifolio-enviar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+    margin: -50px auto 40px;      
+    background-color: #018AB0;
+    padding: 15px 12px;
+    border-radius: 10px 8px;
+    gap: 15px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.portifolio-enviar-img{
+    display: flex;
+    justify-content: center;
+    max-width: 25px;
+    border-radius: 10px;
+}
+.portifolio-enviar-texto{
+    color: white;
+    font-weight: 600;
+}
+
+.portifolio-enviar:hover{
+    transform: translateY(-3px);
+}
+
+
 /*-----------------------Footer-----------------------*/
 
 footer{
