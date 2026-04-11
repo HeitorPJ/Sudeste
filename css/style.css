@@ -52,8 +52,11 @@ header{
     align-items: center;
 }
 .btnsHeader{
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
+}
+.btnsHeader:hover{
+    color: #018AB0;
 }
 
 #SolicitarProposta {
@@ -62,6 +65,7 @@ header{
     border-radius: 10px;
     border: none;
     padding: 8px 20px;
+    
 }
 
 /*---------------Hero---------------*/
@@ -595,8 +599,54 @@ header{
 .portifolio-enviar:hover{
     transform: translateY(-3px);
 }
+/*-----------------------Proposta-----------------------*/
+
+.proposta{
+    padding: 0px 0px 100px;
+    gap: 70px;
+}
+.proposta-container{
+    max-width: 1350px;
+    margin:  auto;
+    padding: 30px 80px;
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    
+}
+
+.proposta-texto{
+    
+    background: linear-gradient(
+        to right,
+        #005269d8,
+        #003341
+    );
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    width: 100%;
+    padding: 75px;
+    gap: 15px;
+}
+.proposta-titulo{
+    color: white;
+    font-size: 35px;
+    text-align: center;
+}
 
 
+.proposta-desc{
+    color:#9e9e9e;
+    font-weight: 600;
+    font-size: 17px;
+    max-width: 55%;
+    text-align: center;
+
+}
 /*-----------------------Footer-----------------------*/
 
 footer{
