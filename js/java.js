@@ -24,3 +24,8 @@ function IrPortifolio() {
         behavior: "smooth"
     });
 }
+function IrBlog() {
+    document.getElementById("blog-id").scrollIntoView({
+        behavior: "smooth"
+    });
+}
