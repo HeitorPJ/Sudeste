@@ -1,4 +1,3 @@
-
 /*----------------Reset---------------*/
 *{
     margin: 0;
@@ -790,6 +789,10 @@ header{
     padding: 0 80px;
     gap: 70px;
 }
+.contato-container-texto{
+    display: flex;
+    gap: 40px;
+}
 
 .contato-info{
     background: linear-gradient(
@@ -801,7 +804,11 @@ header{
     border-radius: 15px;
     padding: 30px 25px;
     width: 40%;
-    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.contato-info-container{
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -848,10 +855,145 @@ header{
 .contato-form{
     width: 60%;
 }
+.contato-form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contato-form input{
+    border-radius: 5px;
+    padding: 5px;
+    
+    border: 1px solid #6d6d6d;
+    display: flex;
+    gap: 10px;
+}
+.contato-form-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; 
+    width: 100%;
+}
+
+.contato-form-opcoes{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contato-form input,
+.contato-form select{
+    width: 100%; 
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid #a0a0a09f;
+    font-size: 18px;
+}
+
+textarea{
+    width: 100%;
+    height: 120px;
+
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #a0a0a09f;
+    font-size: 18px;
+    resize: none;
+}
+
+
+
+.contato-form-btn button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 15px;
+    width: 220px;
+    border-radius: 10px;
+    border: 1px solid #a0a0a09f;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    background-color: #018AB0;
+    cursor: pointer;
+}
+.contato-form-btn button img{
+    width: 20px;
+}
+input:focus,
+textarea:focus,
+select:focus{
+    outline: none;
+    border: 1px solid #00C4FF;
+}
+input,
+textarea,
+select,
+button{
+    font-family: inherit;
+}
+
 /*-----------------------Footer-----------------------*/
 footer{
     background-color: #141313;
-    bottom: 0;
     width: 100%;
-    height: 60px;
+    padding: 50px 0px;    
+}
+
+/* CONTAINER CENTRAL */
+.footer-container{
+
+    display: flex;
+    flex-direction: column;
+    max-width: 1350px;
+    gap: 40px;
+    margin: auto;
+    padding: 0 80px;
+}
+
+.footer-geral{
+    display: flex;
+    gap: 40px;
+}
+.footer-geral > div{
+    flex: 1;
+}
+.footer-info, .footer-servicos, .footer-navegacao{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* IMAGEM */
+#footer-img{
+    max-width: 250px;
+    width: 100%;
+}
+
+
+.footer-container h1{
+    color: white;
+    font-size: 18px;
+}
+
+.footer-container p{
+    color: #6d6d6d;
+    font-weight: 500;
+}
+.btnsfooter{
+    cursor: pointer;
+}
+.btnsfooter:hover{
+    color: #008CC4;
+}
+
+.direitos{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+hr{
+    border: none;              
+    height: 1px;              
+    background-color: #a0a0a09f;
 }

@@ -362,69 +362,72 @@
                 <h1 class="titulo">Vamos conversar sobre seu projeto</h1>
                 <p class="descricao">Entre em contato e receba uma proposta personalizada para as necessidades da sua empresa.</p>
             </div>
-            <div class="contato-container-info">
+            <div class="contato-container-texto">
                 <div class="contato-info">
-                    <h1 class="contato-info-h1">Informações de Contato</h1>
-                    <div class="contato-info-item">
-                        <div class="contato-item-imagem">
-                            <img src="IMG/map-pin.png" alt="">
+                    <div class="contato-info-container">
+                        <h1 class="contato-info-h1">Informações de Contato</h1>
+                        <div class="contato-info-item">
+                            <div class="contato-item-imagem">
+                                <img src="IMG/map-pin.png" alt="">
+                            </div>
+                            <div class="contato-item-texto">
+                                <h1 class="contato-item-h1">ENDEREÇO</h1>
+                                <p class="contato-item-p">Rua Alvim Soares Bermudes, nº 45, Salas 101 A e 101 B, Morada de Camburi, Vitória/ES - CEP 29.062-515.</p>
+                            </div>
                         </div>
-                        <div class="contato-item-texto">
-                            <h1 class="contato-item-h1">ENDEREÇO</h1>
-                            <p class="contato-item-p">Rua Alvim Soares Bermudes, nº 45, Salas 101 A e 101 B, Morada de Camburi, Vitória/ES - CEP 29.062-515.</p>
+                        <div class="contato-info-item">
+                            <div class="contato-item-imagem">
+                                <img src="IMG/telephone.png" alt="">
+                            </div>
+                            <div class="contato-item-texto">
+                                <h1 class="contato-item-h1">TELEFONE</h1>
+                                <p class="contato-item-p">(27) 3376-8146 / (27) 9 8854-8301</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contato-info-item">
-                        <div class="contato-item-imagem">
-                            <img src="IMG/telephone.png" alt="">
+                        <div class="contato-info-item">
+                            <div class="contato-item-imagem">
+                                <img src="IMG/mail.png" alt="">
+                            </div>
+                            <div class="contato-item-texto">
+                                <h1 class="contato-item-h1">E-MAIL</h1>
+                                <p class="contato-item-p">comercial@consultoriasudeste.com.br</p>
+                            </div>
                         </div>
-                        <div class="contato-item-texto">
-                            <h1 class="contato-item-h1">TELEFONE</h1>
-                            <p class="contato-item-p">(27) 3376-8146 / (27) 9 8854-8301</p>
-                        </div>
-                    </div>
-                    <div class="contato-info-item">
-                        <div class="contato-item-imagem">
-                            <img src="IMG/mail.png" alt="">
-                        </div>
-                        <div class="contato-item-texto">
-                            <h1 class="contato-item-h1">E-MAIL</h1>
-                            <p class="contato-item-p">comercial@consultoriasudeste.com.br</p>
-                        </div>
-                    </div>
-                    <div class="contato-info-item">
-                        <div class="contato-item-imagem">
-                            <img src="IMG/clock.png" alt="">
-                        </div>
-                        <div class="contato-item-texto">
-                            <h1 class="contato-item-h1">HORÁRIO</h1>
-                            <p class="contato-item-p">Seg - Sex, 08:00 - 18:00</p>
+                        <div class="contato-info-item">
+                            <div class="contato-item-imagem">
+                                <img src="IMG/clock.png" alt="">
+                            </div>
+                            <div class="contato-item-texto">
+                                <h1 class="contato-item-h1">HORÁRIO</h1>
+                                <p class="contato-item-p">Seg - Sex, 08:00 - 18:00</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="contato-form">
-                    <form action="">
-                        <div>
-                            <input type="text" placeholder="Seu nome">
-                            <input type="email" placeholder="Seu e-mail">
-                            <input type="text" placeholder="Empresa">
-                            <input type="text" placeholder="Telefone" max="15">
+                    <form class="contato-form-container" action="">
+                        <div class="contato-form-grid">
+                            <input type="text" name="nome" placeholder="Seu nome*" required>
+                            <input type="email" name="email" placeholder="Seu e-mail*" required>
+                            <input type="text" name="empresa" placeholder="Empresa">
+                            <input type="tel" name="telefone" placeholder="Telefone*" maxlength="15" required>      
                         </div>
-                        <div>
-                            <select id="contato-form-servico" name="servico">
-                                <option value="">Selecione o serviço de interesse</option>
+                        <div class="contato-form-opcoes">
+                            <select id="contato-form-servico" name="servico" required>
+                                <option value="">Selecione o serviço de interesse*</option>
                                 <option value="gerenciamento">Gerenciamento de Áreas Contaminadas</option>
                                 <option value="hidrologia">Hidrogeologia e Hidrologia</option>
                                 <option value="geologia">Geotecnia e Geologia de Engenharia</option>
-                                <option value="Geoprocessamento">Geoprocessamento, RPAs e Topografia</option>
+                                <option value="geoprocessamento">Geoprocessamento, RPAs e Topografia</option>
                                 <option value="licenciamento">Licenciamento Ambiental</option>
                                 <option value="mineracao">Mineração e Mapeamento Geológico</option>
                                 <option value="residuos">Resíduos Sólidos e Efluentes</option>
                             </select>
-                            <input type="text" placeholder="Descreva brevemente seu projeto ou necessidade">
-                        </div>
-                        <div>
-                            
+                            <textarea placeholder="Descreva brevemente seu projeto"></textarea>
+                        </div >
+                        <div class="contato-form-btn">
+                                
+                                <button type="submit"><img class="portifolio-enviar-img" src="IMG/send.png" alt="">ENVIAR MENSAGEM</button>
                         </div>
                     </form>
                 </div>
@@ -433,6 +436,41 @@
 
     </section>
     
-    <footer><p>teste</p></footer>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-geral">
+                <div class="footer-info">
+                <img id="footer-img" src="IMG/Logo-1.png">
+                <p>Soluções integradas em consultoria ambiental e geologia para empresas que buscam excelência técnica e conformidade ambiental.</p>
+                </div>
+                <div class="footer-servicos">
+                    <h1>Serviços</h1>
+                    <p class="btnsfooter" onclick="IrServicos()">Gerenciamento de Áreas Contaminadas</p>
+                    <p class="btnsfooter" onclick="IrServicos()">Hidrogeologia e Hidrologia</p>
+                    <p class="btnsfooter" onclick="IrServicos()">Geotecnia e Geologia de Engenharia</p>
+                    <p class="btnsfooter" onclick="IrServicos()">Geoprocessamento, RPAs e Topografia</p>
+                    <p class="btnsfooter" onclick="IrServicos()">Licenciamento Ambiental</p>
+                    <p class="btnsfooter" onclick="IrServicos()">Mineração e Mapeamento Geológico</p>
+                    <p class="btnsfooter" onclick="IrServicos()">Resíduos Sólidos e Efluentes</p>              
+                </div>
+                <div class="footer-navegacao">
+                    <h1>Navegação</h1>
+                    <p class="btnsfooter" onclick="IrClientes()">Clientes</p>
+                    <p class="btnsfooter" onclick="IrQuemSomos()">Quem Somos</p>
+                    <p class="btnsfooter" onclick="IrServicos()">Serviços</p>
+                    <p class="btnsfooter" onclick="IrPortifolio()">Portifólio</p>
+                    <p class="btnsfooter" onclick="IrBlog()">Blog</p>
+                    <p class="btnsfooter" onclick="IrContato()">Contato</p>
+                </div>
+            </div>
+            <hr>
+            <div class="direitos">
+            <p>© 2026 Sudeste Ambiental. Todos os direitos reservados.</p>
+            <p>Consultoria Ambiental & Geologia</p>
+        </div>
+        </div>
+        
+        
+    </footer>
 </body>
 </html>
