@@ -809,6 +809,7 @@ header{
 
 .contato-info-item{
     display: flex;
+    align-items: center;
     gap: 15px;
 }
 .contato-item-imagem{
@@ -823,6 +824,7 @@ header{
 .contato-item-imagem img{
     width: 20px;    
     max-height: 20px;
+    
 }
 
 .contato-item-texto{
