@@ -469,13 +469,14 @@ header{
     font-weight: 600;
     padding: 8px;
 }
-.card-btn-saiba:hover {
+.card-btn-proposta:hover, .card-btn-saiba:hover {
     padding: 7px;
     border:1px solid #00C4FF;
     background-color: #0079B1;
     border-radius: 5px;
     color: white;
 }
+
 /*-----------------------Portifólio-----------------------*/
 .portifolio{
     padding: 100px 0px;
@@ -760,7 +761,7 @@ header{
     font-size: 15px;
     font-weight: 600;
     display: flex;
-    color: #018AB0;
+    color: #008CC4;
     gap: 3px;
     cursor: pointer;
     padding: 0 25px 20px;
@@ -772,7 +773,7 @@ header{
 }
 
 .blog-card-unitario:hover .blog-card-titulo{
-    color: #018AB0;
+    color: #008CC4;
 }
 
 /*-----------------------Contato-----------------------*/
@@ -787,8 +788,64 @@ header{
     max-width: 1350px;
     margin: auto;
     padding: 0 80px;
+    gap: 70px;
 }
 
+.contato-info{
+    background: linear-gradient(
+        to right,
+        #002c38,
+        #007494
+        
+    );
+    border-radius: 15px;
+    padding: 30px 25px;
+    width: 40%;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contato-info-item{
+    display: flex;
+    gap: 15px;
+}
+.contato-item-imagem{
+    
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #018ab05d;
+    border-radius: 10px;
+    max-height: 40px;
+}
+.contato-item-imagem img{
+    width: 20px;    
+    max-height: 20px;
+}
+
+.contato-item-texto{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.contato-info-h1{
+    color: white;
+    font-size: 25px;
+}
+.contato-item-h1{
+    font-size: 13px;
+    font-weight: 600;
+    color: #9e9e9e
+}
+.contato-item-p{
+    color: white;
+    font-size: 13px;
+}
+.contato-form{
+    width: 60%;
+}
 /*-----------------------Footer-----------------------*/
 footer{
     background-color: #141313;
