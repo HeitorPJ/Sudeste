@@ -29,3 +29,8 @@ function IrBlog() {
         behavior: "smooth"
     });
 }
+function IrContato() {
+    document.getElementById("contato-id").scrollIntoView({
+        behavior: "smooth"
+    });
+}

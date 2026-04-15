@@ -1,31 +1,36 @@
 
+/*----------------Reset---------------*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*----------------Body---------------*/
 body{
     padding-top: 60px;
     font-family: "Montserrat", sans-serif;
 }
 
+/*----------------Font---------------*/
 .montserrat {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
-/*----------------Header---------------*/
+
+/*--------------------Header-------------------*/
 header{
     top: 0;
     position: fixed;
     width: 100%;
     height: 60px;
-    background-color: #0B151E;
+    background-color: #2F2A2A;
     z-index: 100;
-
 }
+
+/*--------Header-Container--------*/
 .cabecalho{
     max-width: 1350px;
     margin: auto;
@@ -36,12 +41,27 @@ header{
     align-items: center;
 }
 
-/*--------Header-Botões--------*/ 
+/*--------Header-Logo--------*/
+#logo{
+    position: relative;
+    display: flex;
+}
+
+#logo img{
+    width: 100%;
+    max-width: 350px;
+    height: 40px;
+    object-fit: cover;
+    object-position: left;
+    border-radius: 12px;
+    cursor: pointer;
+}
 
 #btnVoltarAoTopo{
-    cursor: pointer;
-    color: white;
+    width: 100%;
 }
+
+/*--------Header-Botões--------*/
 #btnsHeader{
     color: rgb(210, 210, 210);
     display: flex;
@@ -51,25 +71,26 @@ header{
     font-size: 15px;
     align-items: center;
 }
+
 .btnsHeader{
     font-weight: 600;
     cursor: pointer;
 }
+
 .btnsHeader:hover{
-    color: #018AB0;
+    color: #008CC4;
 }
 
+/*--------Header-Botão-Proposta--------*/
 #SolicitarProposta {
     color: white;
-    background-color: #018AB0;
+    background-color: #00B1EA;
     border-radius: 10px;
     border: none;
     padding: 8px 20px;
-    
 }
 
-/*---------------Hero---------------*/
-
+/*-------------------Hero-------------------*/
 
 .hero {
     min-height: 100vh;
@@ -92,7 +113,6 @@ header{
     justify-content: flex-start
 }
 
-/*---------------Hero-div-content---------------*/ 
 
 .heroContent {
     width: 56%;
@@ -101,9 +121,9 @@ header{
     gap: 30px;
 }
 
-
+/*--------Hero-Texto--------*/
 #hero-SubTitulo{
-    color: #00c8ff;
+    color: #00C4FF;
     background-color: #005e79;
     padding: 3px 10px;
     margin: 0;
@@ -112,24 +132,25 @@ header{
     justify-content: center;
     border-radius: 12px;
     font-size: 15px;
-    border:1px solid #00c8ff;
+    border:1px solid #00C4FF;
     backdrop-filter: blur(10px);
     font-weight: 600;
 }
+
 .heroContent h1 {
     font-size: 68px;
-
 }
+
 .heroContent span{
     font-size: 20px;
 }
+
 #HeroTitulo{
-    color: #009cc7;
+    color: #009ED7;
     font-size: 68px;
 }
 
-/*--------Hero-Botões--------*/ 
-
+/*--------Hero-Botões--------*/
 .BtnHero{
     display:flex;
     gap: 15px;
@@ -137,7 +158,7 @@ header{
 
 .BtnHero-Proposta {
     color: white;
-    background-color: #018AB0;
+    background-color: #009ED7;
     border: none;
     padding: 16px;
     border-radius: 10px;
@@ -145,31 +166,34 @@ header{
     width: 190px;
     font-weight: 700;
     transition: transform 0.5s ease;
-
 }
-.BtnHero-Proposta:hover {
 
+.BtnHero-Proposta:hover {
     box-shadow: 0 1px 5px rgba(255, 255, 255, 0.753)
 }
 
 .BtnHero-Servico {
     color: white;
     background-color:transparent;
-    border:1.5px solid rgb(210, 210, 210);;
+    border:1.5px solid rgb(210, 210, 210);
     padding: 16px;
     border-radius: 10px;
     cursor: pointer;
     width: 190px;
     font-weight: 700;
 }
+
 .BtnHero-Servico:hover {
-    background-color: rgba(255, 255, 255, 0.212);}
+    background-color: rgba(255, 255, 255, 0.212);
+}
+
 /*---------------Hero-div-info---------------*/ 
 
 .heroInfo{
     display: flex;
     justify-content: space-between;
 }
+
 .heroinfo-geral{
     display: flex;
     justify-content: left;
@@ -181,7 +205,8 @@ header{
     border: 1.5px solid rgba(255, 255, 255, 0.253);
     gap: 15px;
 }
-/*--------Hero-Info-Imagem--------*/ 
+
+/*--------Hero-Info-Imagem--------*/
 .heroinfo-imagem img{
     display: flex;
     justify-content: center;
@@ -190,32 +215,58 @@ header{
     padding: 10px;
     border-radius: 10px;
 }
-/*--------Hero-Info-Texto--------*/ 
+
+/*--------Hero-Info-Texto--------*/
 .heroinfo-texto h1{
     font-size: 25px;
 }
+
 .heroinfo-texto p{
     font-size: 15px;
     color: rgb(210, 210, 210);
 }
+/*-----------------------Titulos-gerais-----------------------*/
+.titulo-geral{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.subtitulo{
+    color:#008CC4;
+    font-weight: 600;
+    font-size: 16px;
+}
+.titulo{
+    font-size: 35px;
+    color: #2F2A2A;
+    max-width: 550px;
+    text-align: center;
+}
+.descricao{
+    color: #6d6d6d;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 16px;
+    max-width: 650px;
+    text-align: center;
+}
 
-/*---------------Clientes---------------*/
-
-
+/*-----------------------Clientes-----------------------*/
 .clientes{
     padding: 100px 0px;
 }
 
-/*---------------Carousel---------------*/
+/*--------Carousel--------*/
 
 
-/*---------------Quem-Somos---------------*/
-
-
+/*-----------------------Quem-Somos-----------------------*/
 .QuemSomos{
     padding: 100px 0px;
 }
 
+/*--------Quem-Somos-container--------*/
 .QuemSomos-container{
     display: flex;
     max-width: 1350px;
@@ -224,8 +275,7 @@ header{
     padding: 0 80px;
 }
 
-/*---------------Quem-Somos-div-imagem---------------*/
-
+/*--------Quem-Somos-imagem--------*/
 .QuemSomos-imagem{
     position: relative;
     display: flex;
@@ -240,12 +290,14 @@ header{
     object-position: center;
     border-radius: 12px;
 }
+
+/*--------Quem-Somos-imagem-texto--------*/
 .QuemSomos-imagem-texto{
     margin-top: -40px;
     margin-left: auto;
     margin-right: -40px;  
     color: white;
-    background-color: #005e79;
+    background-color: #0079B1;
     padding: 20px 10px;
     width: 160px;
     border-radius: 12px;
@@ -253,12 +305,9 @@ header{
     display: grid;
     justify-content: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.555);
-
 }
 
-
-/*---------------Quem-Somos-div-texto---------------*/
-
+/*--------Quem-Somos-texto--------*/
 .QuemSomos-texto{
     width: 50%;
     display: flex;
@@ -266,8 +315,9 @@ header{
     flex-direction: column;
     font-weight: 600;
     align-items: flex-start;
-
 }
+
+/*--------Quem-Somos-titulo--------*/
 .QuemSomos-texto-titulo{
     display: flex;
     flex-direction: column;
@@ -275,24 +325,24 @@ header{
 }
 
 #QuemSomos-texto-subtitulo{
-    color:#018AB0;
+    color:#008CC4;
     font-weight: 600;
     font-size: 16px;
-
 }
 #QuemSomos-titulo-titulo{
     font-size: 40px;
-    color: #0B151E;
+    color: #2F2A2A;
 }
-/*--------Quem-Somos-descricão--------*/ 
+
+/*--------Quem-Somos-descrição--------*/ 
 #QuemSomos-texto-desc{
-    color: rgb(81, 90, 95);
+    color: #6d6d6d;
     font-weight: 400;
     line-height: 1.4;
     font-size: 16px;
 }
-/*--------Quem-Somos-infos--------*/ 
 
+/*--------Quem-Somos-infos--------*/ 
 .QuemSomos-texto-info{
     display: flex;
     flex-direction: column;
@@ -300,8 +350,8 @@ header{
     color: #0B151E;
     font-weight: 500;
     font-size: 15px;
-
 }
+
 .QuemSomos-info-imagem{
     display: flex;
     width: 100%;
@@ -309,33 +359,6 @@ header{
     gap: 10px;
 }
 
-/*-----------------------Titulos-gerais-----------------------*/
-.titulo-geral{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-.subtitulo{
-    color:#018AB0;
-    font-weight: 600;
-    font-size: 16px;
-}
-.titulo{
-    font-size: 35px;
-    color: #0B151E;
-    max-width: 550px;
-    text-align: center;
-}
-.descricao{
-    color: rgb(81, 90, 95);
-    font-weight: 400;
-    line-height: 1.4;
-    font-size: 16px;
-    max-width: 650px;
-    text-align: center;
-}
 /*-----------------------Mapa-----------------------*/
 .mapa{
     padding: 100px 0;
@@ -347,12 +370,10 @@ header{
     padding: 0 80px;
 }
 
-/*-----------------------servicos-----------------------*/
-
+/*-----------------------Serviços-----------------------*/
 .servicos{
     padding: 100px 0px;
-
-    
+    background-color: #FFF8F0;
 }
 
 .servicos-container{
@@ -364,7 +385,7 @@ header{
     padding: 0 80px;
 }
 
-/*-----------------------servicos-card-----------------------*/
+/*-----------------------Serviços-card-----------------------*/
 .cards{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -372,18 +393,19 @@ header{
     max-width: 1350px;
     margin: 0;
     width: 100%;
-
 }
+
+/*--------Card--------*/
 .card{
     width: 100%;
     min-width: 0;
     transition: transform 0.5s ease;
-    
 }
+
 .card-container{
     width: 100%;
     height: 100%;
-    padding: 30px 35px; /* margem interna dos cards*/
+    padding: 30px 35px;
     border-radius: 10px 8px;
     border: 1px solid transparent;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.370);
@@ -391,17 +413,18 @@ header{
     display: flex;
     flex-direction: column;     
     gap: 20px;
-    
 }
+
+/*--------Card-hover--------*/
 .card:hover {
     transform: translateY(-5px);
     border-radius: 10px 8px;
 }
 .card:hover .card-container{
-    border-color: #00c8ff;
+    border-color: #00C4FF;
 }
-/*--------Card-Imagem--------*/ 
 
+/*--------Card-imagem--------*/ 
 .card-imagem{
     max-width: 55px;
     background-color: rgba(209, 208, 208, 0.411);
@@ -409,20 +432,17 @@ header{
     border-radius: 10px;
 }
 
-/*--------Card-Texto--------*/ 
-
+/*--------Card-texto--------*/ 
 .card-titulo{
     font-size: 18px;
     color: #0B151E;
 }
 .card-desc{
     font-size: 15px;
-    color: rgb(81, 90, 95);
-
+    color: #6d6d6d;
 }
 
-/*--------Card-Botão--------*/ 
-
+/*--------Card-botões--------*/ 
 .card-btn{
     display: flex;
     gap: 15px;
@@ -433,43 +453,34 @@ header{
 }
 
 .card-btn-proposta{
-    color:#018AB0;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-weight: 600;
-        padding: 8px;
-
-}
-.card-btn-proposta:hover {
-    border:1px solid #00c8ff;
-    background-color: #018AB0;
-    border-radius: 5px;
-    padding: 7px;
-    color: white;
-}
-.card-btn-saiba{
-    color:#018AB0;
+    color:#008CC4;
     background-color: transparent;
     border: none;
     cursor: pointer;
     font-weight: 600;
     padding: 8px;
+}
 
+.card-btn-saiba{
+    color:#008CC4;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 8px;
 }
 .card-btn-saiba:hover {
     padding: 7px;
-    border:1px solid #00c8ff;
-    background-color: #018AB0;
+    border:1px solid #00C4FF;
+    background-color: #0079B1;
     border-radius: 5px;
     color: white;
 }
-
 /*-----------------------Portifólio-----------------------*/
-
 .portifolio{
     padding: 100px 0px;
 }
+
 .portifolio-container{
     max-width: 1350px;
     margin: auto;
@@ -486,16 +497,14 @@ header{
     width: 100%;
     margin: 40px auto;     
     padding: 0 80px; 
-    
 }
-/*--------Portifólio-Imagem--------*/ 
 
+/*--------Portifólio-Imagem--------*/ 
 .portifolio-imagem{
     position: relative;
     overflow: hidden;
     border-radius: 10px;
     border: 1px solid transparent;
-
 }
 
 .portifolio-imagem img{
@@ -506,10 +515,9 @@ header{
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.37);
     transition: transform 0.4s ease;
-
 }
-/*--------Portifólio-Overlay--------*/ 
 
+/*--------Portifólio-Overlay-Texto--------*/ 
 .overlay-texto{
     position: absolute;
     bottom: 20px;
@@ -522,35 +530,33 @@ header{
     flex-direction: column;
     gap: 10px;
 }
+
 .overlay-titulo{
     font-size: 20px;
     color: white;
 }
+
 .overlay-subtitulo{
-    color: #00c8ff;
+    color: #00C4FF;
     background-color: #005e79;
     padding: 3px 10px;
     margin: 0;
-
-
     align-self: flex-start;
     border-radius: 12px;
     font-size: 13px;
-    border:1px solid #00c8ff;
+    border:1px solid #00C4FF;
 }
-/*--------Portifólio-hover--------*/ 
 
+/*--------Portifólio-hover--------*/ 
 .portifolio-imagem::after{
     content: "";
     position: absolute;
     inset: 0;
-
     background: linear-gradient(
         to top,
         rgba(0, 0, 0, 0.6),
         rgba(0, 0, 0, 0)
     );
-
     opacity: 0;
     transition: all 0.3s ease;
     z-index: 1;
@@ -559,16 +565,17 @@ header{
 .portifolio-imagem:hover::after{
     opacity: 1;
 }
+
 .portifolio-imagem:hover img{
     transform: scale(1.08);
 }
+
 .portifolio-imagem:hover .overlay-texto{
     opacity: 1;
     transform: translateY(0);
 }
 
 /*--------Portifólio-Enviar--------*/ 
-
 .portifolio-enviar{
     display: flex;
     justify-content: center;
@@ -584,12 +591,15 @@ header{
     transition: transform 0.5s ease;
 }
 
+/*--------Portifólio-Enviar-img--------*/
 .portifolio-enviar-img{
     display: flex;
     justify-content: center;
     max-width: 25px;
     border-radius: 10px;
 }
+
+/*--------Portifólio-Enviar-texto--------*/
 .portifolio-enviar-texto{
     color: white;
     font-weight: 600;
@@ -598,12 +608,13 @@ header{
 .portifolio-enviar:hover{
     transform: translateY(-3px);
 }
-/*-----------------------Proposta-----------------------*/
 
+/*-----------------------Proposta-----------------------*/
 .proposta{
     padding: 0px 0px 100px;
     gap: 70px;
 }
+
 .proposta-container{
     max-width: 1350px;
     margin:  auto;
@@ -612,11 +623,10 @@ header{
     display: flex;
     gap: 50px;
     justify-content: center;
-    
 }
 
+/*--------Proposta-texto--------*/
 .proposta-texto{
-    
     background: linear-gradient(
         to right,
         #007494,
@@ -631,12 +641,12 @@ header{
     padding: 75px;
     gap: 30px;
 }
+
 .proposta-titulo{
     color: white;
     font-size: 35px;
     text-align: center;
 }
-
 
 .proposta-desc{
     color:#9e9e9e;
@@ -644,9 +654,9 @@ header{
     font-size: 17px;
     max-width: 55%;
     text-align: center;
-
 }
 
+/*--------Proposta-botão--------*/
 .proposta-btn{
     color: white;
     background-color: #018AB0;
@@ -658,11 +668,11 @@ header{
 }
 
 /*-----------------------Blog-----------------------*/
-
 .blog{
     padding: 100px 0px;
-    
+    background-color: #FFF8F0;
 }
+
 .blog-container{
     display: flex;
     flex-direction: column;
@@ -671,6 +681,8 @@ header{
     margin: auto;
     padding: 0 80px;
 }
+
+/*--------Blog-card--------*/
 .blog-card{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
@@ -678,31 +690,108 @@ header{
     max-width: 1350px;
     margin: 0;
     width: 100%;
-
 }
+
+
 .blog-card-unitario{
     width: 100%;
     min-width: 0;
     transition: transform 0.5s ease;
 }
+
 .blog-card-container{
     width: 100%;
     height: 100%;
-    padding: 30px 35px; /* margem interna dos cards*/
-    border-radius: 10px 8px;
+    border-radius: 10px;
     border: 1px solid transparent;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.370);
     display: flex;
     flex-direction: column;     
     gap: 20px;
+    cursor: pointer;
 }
+
+/*--------Blog-imagem--------*/
+.blog-container-imagem{
+    width: 100%;
+    height: 200px;
+    background-color: #0079B1;
+    border-radius: 10px 10px 0 0;
+    padding: 0;
+}
+
+/*--------Blog-Texto--------*/
+.blog-card-data{
+    display: flex;
+    gap: 5px;
+    padding: 0 25px;
+}
+
+.blog-data-img{
+    width: 15px;
+    height: 100%;
+}
+
+.blog-card-subtitulo{
+    font-size: 12px;
+    color: #6d6d6d;
+}
+
+.blog-card-titulo{
+    font-size: 20px;
+    padding: 0 25px;
+}
+
+.blog-card-desc{
+    font-size: 15px;
+    color: #6d6d6d;
+    padding: 0 25px;
+}
+
+/*--------Blog-botão--------*/
+.blog-btn-img{
+    width: 20px;
+}
+
 .blog-card-btn{
     margin-top:auto;
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    color: #018AB0;
+    gap: 3px;
+    cursor: pointer;
+    padding: 0 25px 20px;
 }
-/*-----------------------Footer-----------------------*/
 
+/*--------Blog-hover--------*/
+.blog-card-container:hover{
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.452);
+}
+
+.blog-card-unitario:hover .blog-card-titulo{
+    color: #018AB0;
+}
+
+/*-----------------------Contato-----------------------*/
+.contato{
+    padding: 100px 0px;
+}
+
+.contato-container{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    max-width: 1350px;
+    margin: auto;
+    padding: 0 80px;
+}
+
+/*-----------------------Footer-----------------------*/
 footer{
-    background-color: #0C141D;
+    background-color: #141313;
     bottom: 0;
     width: 100%;
     height: 60px;

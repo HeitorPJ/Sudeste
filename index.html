@@ -12,7 +12,7 @@
     <header>
         <div class="cabecalho">
             <div id="logo">
-            <h1 id="btnVoltarAoTopo" onclick="voltarAoTopo()">sudeste</h1>
+            <img id="btnVoltarAoTopo" onclick="voltarAoTopo()" src="IMG/Logo-1.png">
             </div>
             <div id="btnsHeader">
                 <p class="btnsHeader" onclick="IrClientes()">Clientes</p>
@@ -20,8 +20,8 @@
                 <p class="btnsHeader" onclick="IrServicos()">Serviços</p>
                 <p class="btnsHeader" onclick="IrPortifolio()">Portifólio</p>
                 <p class="btnsHeader" onclick="IrBlog()">Blog</p>
-                <p class="btnsHeader">Contato</p>
-                <button id="SolicitarProposta" class="btnsHeader">SOLICITAR PROPOSTA</button>
+                <p class="btnsHeader" onclick="IrContato()">Contato</p>
+                <button id="SolicitarProposta" class="btnsHeader" onclick="IrContato()">SOLICITAR PROPOSTA</button>
             </div>
         </div>
     </header>
@@ -35,15 +35,15 @@
                 <p>Somos referência em consultoria ambiental e geologia, oferecendo soluções integradas para licenciamento, remediação, hidrogeologia e muito mais.</p>
 
                 <div class="BtnHero">
-                <button class="BtnHero-Proposta">SOLICITAR PROPOSTA</button>
-                <button class="BtnHero-Servico">NOSSOS SERVIÇOS</button>
+                <button class="BtnHero-Proposta" onclick="IrContato()">SOLICITAR PROPOSTA</button>
+                <button class="BtnHero-Servico" onclick="IrServicos()">NOSSOS SERVIÇOS</button>
                 </div>
             </div>
             
             <div class="heroInfo">
                 <div class="heroinfo-geral">
                     <div class="heroinfo-imagem">
-                        <img src="/IMG/shield.png" alt="">
+                        <img src="IMG/shield.png" alt="">
                     </div>
                     <div class="heroinfo-texto">
                         <h1>500+</h1>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="heroinfo-geral">
                     <div class="heroinfo-imagem">
-                        <img src="/IMG/medal.png" alt="">
+                        <img src="IMG/medal.png" alt="">
                     </div>
                     <div class="heroinfo-texto">
                         <h1>15+</h1>
@@ -61,7 +61,7 @@
                 </div>
                 <div class="heroinfo-geral">
                     <div class="heroinfo-imagem">
-                        <img src="/IMG/map-pin.png" alt="">
+                        <img src="IMG/map-pin.png" alt="">
                     </div>
                     <div class="heroinfo-texto">
                         <h1>20+</h1>
@@ -109,19 +109,19 @@
                  
                 <div class="QuemSomos-texto-info">
                     <div class="QuemSomos-info-imagem">
-                        <img src="/IMG/check.png" alt="">
+                        <img src="IMG/check.png" alt="">
                         <p class="QuemSomos-info-elemento">Equipe multidisciplinar de geólogos, engenheiros e biólogos</p>
                     </div>
                     <div class="QuemSomos-info-imagem">
-                        <img src="/IMG/check.png" alt="">
+                        <img src="IMG/check.png" alt="">
                         <p class="QuemSomos-info-elemento">Atuação em todo o território nacional</p>
                     </div>
                     <div class="QuemSomos-info-imagem">
-                        <img src="/IMG/check.png" alt="">
+                        <img src="IMG/check.png" alt="">
                         <p class="QuemSomos-info-elemento">Projetos para grandes indústrias e órgãos públicos</p>
                     </div>
                     <div class="QuemSomos-info-imagem">
-                        <img src="/IMG/check.png" alt=""> 
+                        <img src="IMG/check.png" alt=""> 
                         <p class="QuemSomos-info-elemento">Comprometimento com prazos e qualidade técnica</p>  
                     </div>
                 </div>
@@ -156,7 +156,7 @@
                 <!-- Primeiro-card -->
                 <div class="card">
                     <div class="card-container">
-                        <img class="card-imagem" src="/IMG/beaker.png" alt="">
+                        <img class="card-imagem" src="IMG/beaker.png" alt="">
                         <h1 class="card-titulo">Gerenciamento de Áreas Contaminadas</h1>
                         <p class="card-desc">Investigação, avaliação de risco e remediação de áreas com passivo ambiental.</p>
                         <div class="card-btn">
@@ -168,7 +168,7 @@
                 <!-- Segundo-card -->
                 <div class="card">
                     <div class="card-container">
-                        <img class="card-imagem" src="/IMG/water-drop.png" alt="">
+                        <img class="card-imagem" src="IMG/water-drop.png" alt="">
                         <h1 class="card-titulo">Hidrogeologia e Hidrologia</h1>
                         <p class="card-desc">Estudos de águas subterrâneas, poços de monitoramento e modelagem hidrológica.</p>
                         <div class="card-btn">
@@ -180,7 +180,7 @@
                 <!-- Terceiro-card -->
                 <div class="card">
                     <div class="card-container">
-                        <img class="card-imagem" src="/IMG/mountain.png" alt="">
+                        <img class="card-imagem" src="IMG/mountain.png" alt="">
                         <h1 class="card-titulo">Geotecnia e Geologia de Engenharia</h1>
                         <p class="card-desc">Sondagens, ensaios geotécnicos e análise de estabilidade de taludes.</p>
                         <div class="card-btn">
@@ -192,7 +192,7 @@
                 <!-- Quarto-card -->
                 <div class="card">
                     <div class="card-container">
-                        <img class="card-imagem" src="/IMG/satellite.png" alt="">
+                        <img class="card-imagem" src="IMG/satellite.png" alt="">
                         <h1 class="card-titulo">Geoprocessamento, RPAs e Topografia</h1>
                         <p class="card-desc">Mapeamento com drones, levantamentos topográficos e análise espacial.</p>
                         <div class="card-btn">
@@ -204,7 +204,7 @@
                 <!-- Quinto-card -->
                 <div class="card">
                     <div class="card-container">
-                        <img class="card-imagem" src="/IMG/file-check.png" alt="">
+                        <img class="card-imagem" src="IMG/file-check.png" alt="">
                         <h1 class="card-titulo">Licenciamento Ambiental</h1>
                         <p class="card-desc">Elaboração de estudos ambientais e acompanhamento de condicionantes.</p>
                         <div class="card-btn">
@@ -216,7 +216,7 @@
                 <!-- Sexto-card -->
                 <div class="card">
                     <div class="card-container">
-                        <img class="card-imagem" src="/IMG/pickaxe.png" alt="">
+                        <img class="card-imagem" src="IMG/pickaxe.png" alt="">
                         <h1 class="card-titulo">Mineração e Mapeamento Geológico</h1>
                         <p class="card-desc">Pesquisa mineral, cubagem de reservas e mapeamento geológico de detalhe.</p>
                         <div class="card-btn">
@@ -228,7 +228,7 @@
                 <!-- Sétimo-card -->
                 <div class="card">
                     <div class="card-container">
-                        <img class="card-imagem" src="/IMG/trash.png" alt="">
+                        <img class="card-imagem" src="IMG/trash.png" alt="">
                         <h1 class="card-titulo">Resíduos Sólidos e Efluentes</h1>
                         <p class="card-desc">Gerenciamento de resíduos, PGRS e projetos de tratamento de efluentes.</p>
                         <div class="card-btn">
@@ -251,28 +251,28 @@
         
             <div class="portifolio-grid">
                 <div class="portifolio-imagem">
-                    <img src="/IMG/escavacao.jpg" alt="">
+                    <img src="IMG/escavacao.jpg" alt="">
                     <div class="overlay-texto">
                         <p class="overlay-subtitulo">Áreas Contaminadas</p>
                         <h1 class="overlay-titulo">Remediação de área contaminada</h1>
                     </div>
                 </div>
                 <div class="portifolio-imagem">
-                    <img src="/IMG/perfuracao.png" alt="">
+                    <img src="IMG/perfuracao.png" alt="">
                     <div class="overlay-texto">
                         <p class="overlay-subtitulo">Hidrogeologia</p>
                         <h1 class="overlay-titulo">Estudo hidrogeológico</h1>
                     </div>
                 </div>
                 <div class="portifolio-imagem">
-                    <img src="/IMG/drone.jpg" alt="">
+                    <img src="IMG/drone.jpg" alt="">
                     <div class="overlay-texto">
                         <p class="overlay-subtitulo">Topografia & RPAs</p>
                         <h1 class="overlay-titulo">Levantamento topográfico com drone</h1>
                     </div>
                 </div>
                 <div class="portifolio-imagem">
-                    <img src="/IMG/analise.jpg" alt="">
+                    <img src="IMG/analise.jpg" alt="">
                     <div class="overlay-texto">
                         <p class="overlay-subtitulo">Operações em Campo</p>
                         <h1 class="overlay-titulo">Operações de campo</h1>
@@ -280,7 +280,7 @@
                 </div>
             </div>
             <div class="portifolio-enviar">
-                <img class="portifolio-enviar-img" src="/IMG/send.png" alt="">
+                <img class="portifolio-enviar-img" src="IMG/send.png" alt="">
                 <p class="portifolio-enviar-texto">RECEBER PORTIFÓLIO POR E-MAIL</p>
             </div>
         </div>
@@ -291,7 +291,7 @@
             <div class="proposta-texto">
                 <h1 class="proposta-titulo">Pronto para iniciar seu projeto?</h1>
                 <p class="proposta-desc">Nossa equipe está preparada para oferecer a melhor solução ambiental para a sua empresa. Solicite uma proposta hoje.</p>
-                <p class="proposta-btn">SOLICITAR PROPOSTA GRATUITA</p>
+                <p class="proposta-btn" onclick="IrContato()">SOLICITAR PROPOSTA GRATUITA</p>
             </div>
         </div>
     </section>
@@ -306,36 +306,106 @@
             <div class="blog-card">
                 <div class="blog-card-unitario">
                     <div class="blog-card-container">
-                        <img class="blog-card-imagem" src="" alt="">
-                        <p class="blog-card-subtitulo">15 Mar 2026</p>
+                        <div class="blog-container-imagem">
+                            <img class="blog-card-imagem" src="" alt="" >
+                        </div>
+                        <div class="blog-card-data">
+                            <img class="blog-data-img" src="IMG/calendar.png" alt="">
+                            <p class="blog-card-subtitulo">15 Mar 2026</p>
+                        </div>
                         <h1 class="blog-card-titulo">O que é o Gerenciamento de Áreas Contaminadas e por que sua empresa precisa</h1>
                         <p class="blog-card-desc">Entenda as etapas do GAC e como estar em conformidade com a legislação ambiental vigente.</p>
-                        <button class="blog-card-btn">Ler artigo</button>
+                        <button class="blog-card-btn">Ler artigo <img class="blog-btn-img" src="IMG/arrow-right.png" alt=""></button>
                         
                     </div>
                 </div>
+                
                 <div class="blog-card-unitario">
                     <div class="blog-card-container">
-                        <img class="blog-card-imagem" src="" alt="">
-                        <p class="blog-card-subtitulo">15 Mar 2026</p>
-                        <h1 class="blog-card-titulo">O que é o Gerenciamento de Áreas Contaminadas e por que sua empresa precisa</h1>
-                        <p class="blog-card-desc">Entenda as etapas do GAC e como estar em conformidade com a legislação ambiental vigente.</p>
-                        <button class="blog-card-btn">Ler artigo</button>
-                        
-                    </div>
-                </div>
-                <div class="blog-card-unitario">
-                    <div class="blog-card-container">
-                        <img class="blog-card-imagem" src="" alt="">
-                        <p class="blog-card-subtitulo">08 Mar 2026</p>
+                        <div class="blog-container-imagem">
+                            <img class="blog-card-imagem" src="" alt="" >
+                        </div>
+                        <div class="blog-card-data">
+                            <img class="blog-data-img" src="IMG/calendar.png" alt="">
+                            <p class="blog-card-subtitulo">08 Mar 2026</p>
+                        </div>
                         <h1 class="blog-card-titulo">Hidrogeologia: como funciona o estudo de águas subterrâneas</h1>
                         <p class="blog-card-desc">Saiba como são realizados os estudos hidrogeológicos e sua importância para o licenciamento.</p>
-                        <button class="blog-card-btn">Ler artigo</button>
+                        <button class="blog-card-btn" >Ler artigo <img class="blog-btn-img" src="IMG/arrow-right.png" alt=""></button>
+                        
+                    </div>
+                </div>
+
+                <div class="blog-card-unitario">
+                    <div class="blog-card-container">
+                        <div class="blog-container-imagem">
+                            <img class="blog-card-imagem" src="" alt="" >
+                        </div>
+                        <div class="blog-card-data">
+                            <img class="blog-data-img" src="IMG/calendar.png" alt="">
+                            <p class="blog-card-subtitulo">01 Mar 2026</p>
+                        </div>
+                        <h1 class="blog-card-titulo">Uso de drones (RPAs) no mapeamento ambiental e topográfico</h1>
+                        <p class="blog-card-desc">Descubra as vantagens do uso de RPAs em levantamentos de campo e monitoramento ambiental.</p>
+                        <button class="blog-card-btn">Ler artigo <img class="blog-btn-img" src="IMG/arrow-right.png" alt=""></button>
                         
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="contato" id="contato-id">
+        <div class="contato-container">
+            <div class="titulo-geral">
+                <p class="subtitulo">CONTATO</p>
+                <h1 class="titulo">Vamos conversar sobre seu projeto</h1>
+                <p class="descricao">Entre em contato e receba uma proposta personalizada para as necessidades da sua empresa.</p>
+            </div>
+            <div class="contato-container-info">
+                <div class="contato-info">
+                    <h1 class="contato-info-h1">Informações de Contato</h1>
+                    <div class="contato-info-item">
+                        <div class="contato-item-imagem">
+                            <img src="" alt="">
+                        </div>
+                        <div class="contato-item-texto">
+                            <h1 class="contato-item-h1">ENDEREÇO</h1>
+                            <p class="contato-item-p">Av. Brasil, 1500 - Centro, Belo Horizonte - MG</p>
+                        </div>
+                    </div>
+                    <div class="contato-info-item">
+                        <div class="contato-item-imagem">
+                            <img src="" alt="">
+                        </div>
+                        <div class="contato-item-texto">
+                            <h1 class="contato-item-h1">TELEFONE</h1>
+                            <p class="contato-item-p">(27) 3376-8146 / (27) 9 8854-8301</p>
+                        </div>
+                    </div>
+                    <div class="contato-info-item">
+                        <div class="contato-item-imagem">
+                            <img src="" alt="">
+                        </div>
+                        <div class="contato-item-texto">
+                            <h1 class="contato-item-h1">E-MAIL</h1>
+                            <p class="contato-item-p">comercial@consultoriasudeste.com.br</p>
+                        </div>
+                    </div>
+                    <div class="contato-info-item">
+                        <div class="contato-item-imagem">
+                            <img src="" alt="">
+                        </div>
+                        <div class="contato-item-texto">
+                            <h1 class="contato-item-h1">HORÁRIO</h1>
+                            <p class="contato-item-p">Seg - Sex, 08:00 - 18:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contato-form"></div>
+            </div>
+        </div>
+
     </section>
     
     <footer><p>teste</p></footer>
