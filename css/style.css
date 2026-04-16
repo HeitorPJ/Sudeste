@@ -45,7 +45,8 @@ header{
     position: relative;
     display: flex;
     align-items: center;
-    height: 80px
+    height: 80px;
+    flex: 0 0 auto;
 }
 
 #logo img{
@@ -65,22 +66,20 @@ header{
 }
 
 /*--------Header-Botões--------*/
+
+
 #btnsHeader{
     color: rgb(210, 210, 210);
+    gap: 10px;
     display: flex;
-    justify-content: right;
-    gap: 30px;
-    height: 100%;
-    font-size: 15px;
-    align-items: center;
-    
     
 }
 
-.btnsHeader{
-    font-weight: 600;
-    cursor: pointer;
-    flex: 1;
+.nav-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
     text-align: center;
 }
 
@@ -95,6 +94,7 @@ header{
     border-radius: 10px;
     border: none;
     padding: 8px 20px;
+    margin-right: -10px;
 }
 
 /*-------------------Hero-------------------*/
