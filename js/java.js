@@ -1,3 +1,20 @@
+function trocarLogo() {
+    const logo = document.getElementById("btnVoltarAoTopo");
+    const header = document.querySelector("header");
+
+    if (window.innerWidth <= 1050 && window.innerWidth >= 1000 ) {
+        logo.src = "IMG/Logo-2.png";
+        header.style.padding = "35px 0";
+    } else {
+        logo.src = "IMG/Logo-1.png";
+        header.style.padding = "10px 0";
+    }
+}
+
+window.addEventListener("resize", trocarLogo);
+trocarLogo();
+
+
 function voltarAoTopo() {
             window.scrollTo({
                 top: 0,
@@ -34,6 +51,27 @@ function IrContato() {
         behavior: "smooth"
     });
 }
+
+const track = document.querySelector('.carousel-track');
+const slides = document.querySelectorAll('.carousel-track img');
+
+let index = 0;
+
+document.querySelector('.next').onclick = () => {
+    index = (index + 1) % slides.length;
+    updateCarousel();
+};
+
+document.querySelector('.prev').onclick = () => {
+    index = (index - 1 + slides.length) % slides.length;
+    updateCarousel();
+};
+
+function updateCarousel() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+}
+
+
 var map = L.map('mapa-imagem', {
     scrollWheelZoom: false,
     touchZoom: true,
