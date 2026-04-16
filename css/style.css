@@ -51,11 +51,10 @@ header{
 
 #logo img{
     max-width: 250px;
-    max-height: 60px; /* controla visual */
+    max-height: 60px;
     width: auto;
     object-fit: cover;
     object-position: left;
-    border-radius: 12px;
     cursor: pointer;
     padding: 0 10px 0 0;
 
@@ -65,6 +64,7 @@ header{
     width: 100%;
 }
 
+
 /*--------Header-Botões--------*/
 
 
@@ -72,7 +72,8 @@ header{
     color: rgb(210, 210, 210);
     gap: 10px;
     display: flex;
-    
+    cursor: pointer;
+
 }
 
 .nav-item{
@@ -83,7 +84,7 @@ header{
     text-align: center;
 }
 
-.btnsHeader:hover{
+.nav-item:hover{
     color: #008CC4;
 }
 
@@ -278,7 +279,7 @@ header{
 .carousel-wrapper {
     display: flex;
     align-items: center;
-    gap: 15px;
+    justify-content: space-between;
 }
 .carousel {
     width: 100%;
@@ -309,7 +310,6 @@ header{
     background-color:transparent;
     border: none;
     border-radius: 10px;
-    padding: 10px;
     cursor: pointer;
 }
 .prev img, .next img{
@@ -779,7 +779,7 @@ header{
     display: flex;
     flex-direction: column;     
     gap: 20px;
-    cursor: pointer;
+    cursor:context-menu;    
 }
 
 /*--------Blog-imagem--------*/
@@ -1067,5 +1067,168 @@ hr{
     border: none;              
     height: 1px;              
     background-color: #a0a0a09f;
+}
+
+/*-----------------------Pagina-Blog-----------------------*/
+
+.cabecalho-blog{
+    max-width: 1350px;
+    margin: auto;
+    height: 100%;
+    padding: 0 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logo-blog img{
+    max-width: 300px;
+    max-height: 60px; 
+    width: auto;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+    padding: 5px 10px 0 0;
+
+}
+.btnVoltar-blog{
+    width: 100%;
+}
+
+#SolicitarProposta-blog{
+    cursor: pointer;
+    color: white;
+    background-color: #00B1EA;
+    border-radius: 10px;
+    border: none;
+    padding: 8px 20px;
+    margin-right: -10px;
+}
+.hero-blog {
+    min-height: 45vh;
+    background-image: linear-gradient(to right, rgba(0, 30, 60, 0.836), rgba(0, 30, 60, 0.589)), url('../IMG/imagem1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;              
+    align-items: flex-start;
+}
+
+.container-hero-blog {
+    max-width: 1200px;
+    margin:  auto;
+    padding: 30px 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: flex-start
+}
+
+
+.heroContent-blog {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/*--------Hero-Texto--------*/
+#hero-blog-SubTitulo{
+    color: #00C4FF;
+    background-color: #005e79;
+    padding: 3px 10px;
+    margin: 0;
+    width: 290px;
+    display: flex;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 15px;
+    border:1px solid #00C4FF;
+    backdrop-filter: blur(10px);
+    font-weight: 600;
+}
+
+.heroContent-blog h1 {
+    font-size: 48px;
+}
+.heroContent-blog p {
+    font-size: 15px;
+    color: #adadad;
+}
+
+
+#HeroTitulo{
+    color: #009ED7;
+    font-size: 68px;
+}
+
+.blog-pagina{
+    padding: 100px 0px;
+}
+
+.blog-pagina-container{
+    max-width: 1000px;
+    margin: auto;
+    height: 100%;
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.blog-pagina-btn-voltar{
+    display: flex;
+    margin-right: auto;
+    margin-top:auto;
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    color: #008CC4;
+    gap: 3px;
+    cursor: pointer;
+}
+.blog-pagina-texto{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    line-height: 1.5;
+}
+.blog-pagina-texto h1{
+    font-size: 25px;
+}
+
+.blog-pagina-texto p{
+    color: rgb(107, 107, 107);
+    font-size: 18px;
+}
+.blog-pagina-texto li{
+    color: rgb(107, 107, 107);
+    font-size: 18px;
+}
+.blog-pagina-texto ul{
+    padding-left: 20px; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+.blog-pagina-texto li::marker {
+    color: #008CC4; /* sua cor */
+}
+
+.footer-geral-blog{
+    display: flex;
+    gap: 90px;
+}
+.footer-geral-blog > div{
+    flex: 1;
+}
+.footer-servicos-blog{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 /*-----------------------Responsividade-----------------------*/

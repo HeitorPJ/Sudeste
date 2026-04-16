@@ -21,33 +21,33 @@ function voltarAoTopo() {
                 behavior: 'smooth'
             });}
 function IrClientes() {
-    document.getElementById("clientes-id").scrollIntoView({
+    document.getElementById("clientes").scrollIntoView({
         behavior: "smooth"
     });
 }
 function IrQuemSomos() {
-    document.getElementById("QuemSomos-id").scrollIntoView({
+    document.getElementById("QuemSomos").scrollIntoView({
         behavior: "smooth"
     });
 }
 
 function IrServicos() {
-    document.getElementById("servicos-id").scrollIntoView({
+    document.getElementById("servicos").scrollIntoView({
         behavior: "smooth"
     });
 }
 function IrPortifolio() {
-    document.getElementById("portifolio-id").scrollIntoView({
+    document.getElementById("portifolio").scrollIntoView({
         behavior: "smooth"
     });
 }
 function IrBlog() {
-    document.getElementById("blog-id").scrollIntoView({
+    document.getElementById("blog").scrollIntoView({
         behavior: "smooth"
     });
 }
 function IrContato() {
-    document.getElementById("contato-id").scrollIntoView({
+    document.getElementById("contato").scrollIntoView({
         behavior: "smooth"
     });
 }
