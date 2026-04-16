@@ -367,6 +367,15 @@ header{
     max-width: 1350px;
     margin: auto;
     padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+#mapa-imagem {
+    height: 450px;
+    width: 100%;
+    z-index: 1;
+    border-radius: 15px;
 }
 
 /*-----------------------Serviços-----------------------*/
@@ -629,7 +638,7 @@ header{
 .proposta-texto{
     background: linear-gradient(
         to right,
-        #007494,
+        #018AB0,
         #002c38
     );
     display: flex;
@@ -798,7 +807,7 @@ header{
     background: linear-gradient(
         to right,
         #002c38,
-        #007494
+        #018AB0
         
     );
     border-radius: 15px;
