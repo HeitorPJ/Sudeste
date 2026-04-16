@@ -416,6 +416,9 @@ header{
     align-items: center;
     gap: 10px;
 }
+.QuemSomos-info-imagem img{
+    width: 35px;
+}
 
 /*-----------------------Mapa-----------------------*/
 .mapa{
