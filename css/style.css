@@ -9,6 +9,11 @@
 body{
     padding-top: 60px;
     font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+
+header, footer{
+    overflow: hidden;
 }
 
 /*----------------Font---------------*/
@@ -70,9 +75,11 @@ header{
 
 #btnsHeader{
     color: rgb(210, 210, 210);
-    gap: 10px;
+    gap: 25px;
     display: flex;
     cursor: pointer;
+    align-items: center;
+    margin-left: auto;
 
 }
 
@@ -80,7 +87,6 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 10px;
     text-align: center;
 }
 
@@ -95,9 +101,22 @@ header{
     border-radius: 10px;
     border: none;
     padding: 8px 20px;
-    margin-right: -10px;
+    cursor: pointer;
 }
 
+
+#btn-menu{
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+.container-global{
+    max-width: 1350px;
+    margin: auto;
+    padding: 0 80px;
+}
 /*-------------------Hero-------------------*/
 
 .hero {
@@ -135,7 +154,8 @@ header{
     background-color: #005e79;
     padding: 3px 10px;
     margin: 0;
-    width: 290px;
+    width: 100%;
+    max-width: 290px;
     display: flex;
     justify-content: center;
     border-radius: 12px;
@@ -264,15 +284,13 @@ header{
 /*-----------------------Clientes-----------------------*/
 .clientes{
     padding: 100px 0px;
-    background-color: #FFF8F0;
 }
 .clientes-container{
     display: flex;
     flex-direction: column;
-    max-width: 1350px;
     gap: 70px;
     margin: auto;
-    padding: 0 80px;
+    padding: 0 0px;
 }
 
 /*--------Carousel--------*/
@@ -327,10 +345,8 @@ header{
 /*--------Quem-Somos-container--------*/
 .QuemSomos-container{
     display: flex;
-    max-width: 1350px;
     gap: 70px;
     margin: auto;
-    padding: 0 80px;
 }
 
 /*--------Quem-Somos-imagem--------*/
@@ -426,9 +442,7 @@ header{
 }
 
 .mapa-container{
-    max-width: 1350px;
     margin: auto;
-    padding: 0 80px;
     display: flex;
     flex-direction: column;
     gap: 70px;
@@ -443,16 +457,13 @@ header{
 /*-----------------------Serviços-----------------------*/
 .servicos{
     padding: 100px 0px;
-    background-color: #FFF8F0;
 }
 
 .servicos-container{
     display: flex;
     flex-direction: column;
     gap: 70px;
-    max-width: 1350px;
     margin: auto;
-    padding: 0 80px;
 }
 
 /*-----------------------Serviços-card-----------------------*/
@@ -553,7 +564,6 @@ header{
 }
 
 .portifolio-container{
-    max-width: 1350px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -567,7 +577,6 @@ header{
     max-width: 1350px;
     width: 100%;
     margin: 40px auto;     
-    padding: 0 80px; 
 }
 
 /*--------Portifólio-Imagem--------*/ 
@@ -680,16 +689,86 @@ header{
     transform: translateY(-3px);
 }
 
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.6);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+    z-index: 999;
+}
+
+.popup-overlay.ativo {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.popup-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.popup-box input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.popup-box button {
+    padding: 15px;
+    border: none;
+    background: #00B1EA;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.popup-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#form-popup{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#form-popup input, #form-popup button{
+    font-weight: 700;
+}
+
 /*-----------------------Proposta-----------------------*/
 .proposta{
-    padding: 0px 0px 100px;
+    padding: 0px 0px 20px;
     gap: 70px;
 }
 
 .proposta-container{
-    max-width: 1350px;
     margin:  auto;
-    padding: 30px 80px;
+    padding: 30px 0px;
     width: 100%;
     display: flex;
     gap: 50px;
@@ -741,16 +820,13 @@ header{
 /*-----------------------Blog-----------------------*/
 .blog{
     padding: 100px 0px;
-    background-color: #FFF8F0;
 }
 
 .blog-container{
     display: flex;
     flex-direction: column;
     gap: 70px;
-    max-width: 1350px;
     margin: auto;
-    padding: 0 80px;
 }
 
 /*--------Blog-card--------*/
@@ -855,9 +931,7 @@ header{
     display: flex;
     flex-direction: column;
     gap: 70px;
-    max-width: 1350px;
     margin: auto;
-    padding: 0 80px;
     gap: 70px;
 }
 .contato-container-texto{
@@ -1006,7 +1080,7 @@ button{
 
 /*-----------------------Footer-----------------------*/
 footer{
-    background-color: #141313;
+    background-color: #2F2A2A;
     width: 100%;
     padding: 50px 0px;    
 }
@@ -1157,11 +1231,6 @@ hr{
 }
 
 
-#HeroTitulo{
-    color: #009ED7;
-    font-size: 68px;
-}
-
 .blog-pagina{
     padding: 100px 0px;
 }
@@ -1232,3 +1301,138 @@ hr{
     gap: 10px;
 }
 /*-----------------------Responsividade-----------------------*/
+@media (max-width: 1000px){
+.contato-container-texto{
+    flex-direction: column;
+}
+.contato-info{
+    width: 100%;
+}
+.contato-form{
+    width: 100%;
+}
+}
+
+
+@media (max-width: 950px){
+    /*----ajuste de espacamento----*/
+
+.cabecalho{
+    padding: 0 50px;
+
+}
+.container-global{
+    padding: 0 50px;
+}
+.container{
+    padding: 30px 50px;
+}
+.footer-container{
+    padding: 0 50px;
+
+}
+#btnsHeader{
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #2F2A2A;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    z-index: 999;
+}
+#btnsHeader.active{
+    display: flex;
+}
+#btn-menu{
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+#btn-menu img{
+    width: 40px;
+    display: flex;
+    align-items: center;
+}
+#hero-SubTitulo{
+    font-size: 10px;
+    max-width: 200px;
+}
+.heroContent h1 {
+    font-size: 48px;
+}
+.heroContent p{
+    font-size: 14px;
+}
+#HeroTitulo{
+    color: #009ED7;
+    font-size: 48px;
+}
+
+.subtitulo{
+    font-size: 11px;
+}
+.titulo{
+    font-size: 28px;
+}
+
+.descricao{
+    font-size: 14px;
+}
+
+.QuemSomos-container{
+
+    flex-direction: column;
+}
+.QuemSomos-imagem img{
+    max-width: 800px;
+    width: 100%;
+
+}
+.QuemSomos-texto{
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+}
+.blog-container-imagem{
+    height: 150px;
+}
+.blog-card-container{
+    gap: 10px;
+}
+
+}
+
+
+@media(max-width:700px){
+.cabecalho{
+    padding: 0 20px;
+
+}
+.container-global{
+    padding: 0 20px;
+}
+.container{
+    padding: 30px 20px;
+}
+.footer-container{
+    padding: 0 20px;
+
+}
+.heroInfo{
+    flex-direction: column;
+    gap: 20px;
+}
+.heroinfo-geral{
+    width: 100%;
+}
+.blog-card{
+    display: flex;
+    flex-direction: column;
+}
+.blog-card-container{
+    gap: 15px;
+}
+}
