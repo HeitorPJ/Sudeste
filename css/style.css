@@ -1034,7 +1034,7 @@ header{
     font-size: 18px;
 }
 
-textarea{
+#contato-form-desc{
     width: 100%;
     height: 120px;
 
@@ -1301,138 +1301,442 @@ hr{
     gap: 10px;
 }
 /*-----------------------Responsividade-----------------------*/
-@media (max-width: 1000px){
-.contato-container-texto{
-    flex-direction: column;
+
+/* ===== TABLET (até 1024px) ===== */
+@media (max-width: 1024px) {
+    header {
+    height: 50px;
 }
-.contato-info{
-    width: 100%;
+body {
+    padding-top: 50px;
 }
-.contato-form{
-    width: 100%;
+#btnsHeader {
+    top: 50px;
 }
+    .heroContent h1 {
+        font-size: 52px;
+    }
+    #HeroTitulo {
+        font-size: 52px;
+    }
+    .heroContent {
+        width: 70%;
+    }
+    .portifolio-grid {
+        gap: 15px;
+    }
+    .proposta-texto {
+        padding: 50px 40px;
+    }
+    .proposta-titulo {
+        font-size: 28px;
+    }
+    .proposta-desc {
+        max-width: 75%;
+    }
+    
 }
 
-
-@media (max-width: 950px){
-    /*----ajuste de espacamento----*/
-
-.cabecalho{
-    padding: 0 50px;
-
-}
-.container-global{
-    padding: 0 50px;
-}
-.container{
-    padding: 30px 50px;
-}
-.footer-container{
-    padding: 0 50px;
-
-}
-#btnsHeader{
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: #2F2A2A;
-    width: 100%;
-    flex-direction: column;
-    padding: 20px;
-    gap: 20px;
-    z-index: 999;
-}
-#btnsHeader.active{
-    display: flex;
-}
-#btn-menu{
-    display: block;
-    align-items: center;
-    justify-content: center;
-}
-#btn-menu img{
-    width: 40px;
-    display: flex;
-    align-items: center;
-}
-#hero-SubTitulo{
-    font-size: 10px;
-    max-width: 200px;
-}
-.heroContent h1 {
-    font-size: 48px;
-}
-.heroContent p{
-    font-size: 14px;
-}
-#HeroTitulo{
-    color: #009ED7;
-    font-size: 48px;
+/* ===== CONTATO (até 1000px) ===== */
+@media (max-width: 1000px) {
+    .contato-container-texto {
+        flex-direction: column;
+    }
+    .contato-info {
+        width: 100%;
+    }
+    .contato-form {
+        width: 100%;
+    }
+    
 }
 
-.subtitulo{
-    font-size: 11px;
-}
-.titulo{
-    font-size: 28px;
+/* ===== TABLET MÉDIO (até 950px) ===== */
+@media (max-width: 950px) {
+    /* --- Espaçamentos gerais --- */
+    .cabecalho {
+        padding: 0 30px;
+    }
+    .container-global {
+        padding: 0 30px;
+    }
+    .container {
+        padding: 30px 30px;
+    }
+    .footer-container {
+        padding: 0 30px;
+    }
+    .cabecalho-blog {
+        padding: 0 30px;
+    }
+    .container-hero-blog {
+        padding: 30px 30px;
+    }
+    .blog-pagina-container {
+        padding: 0 30px;
+    }
+
+    /* --- Menu hambúrguer --- */
+    #btnsHeader {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #2F2A2A;
+        width: 100%;
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        z-index: 999;
+    }
+    #btnsHeader.active {
+        display: flex;
+    }
+    #btn-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #btn-menu img {
+        width: 35px;
+    }
+
+    /* --- Hero --- */
+    #hero-SubTitulo {
+        font-size: 11px;
+        max-width: 220px;
+    }
+    .heroContent {
+        width: 100%;
+    }
+    .heroContent h1 {
+        font-size: 42px;
+    }
+    .heroContent p {
+        font-size: 14px;
+    }
+    #HeroTitulo {
+        font-size: 42px;
+    }
+    .heroInfo {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .heroinfo-geral {
+        width: 100%;
+    }
+
+    /* --- Títulos gerais --- */
+    .subtitulo {
+        font-size: 12px;
+    }
+    .titulo {
+        font-size: 28px;
+    }
+    .descricao {
+        font-size: 14px;
+    }
+
+    /* --- Quem Somos --- */
+    .QuemSomos-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .QuemSomos-imagem img {
+        max-width: 100%;
+        width: 100%;
+        height: 300px;
+    }
+    .QuemSomos-imagem-texto {
+        margin-right: 0;
+        margin-left: 0;
+        align-self: flex-end;
+        margin-top: -40px;
+        margin-right: 10px;
+    }
+    .QuemSomos-texto {
+        width: 100%;
+        gap: 20px;
+    }
+    #QuemSomos-titulo-titulo {
+        font-size: 30px;
+    }
+
+    /* --- Portfólio --- */
+    .portifolio-grid {
+        grid-template-columns: 2fr;
+    }
+
+    /* --- Blog --- */
+    .blog-container-imagem {
+        height: 160px;
+    }
+    .blog-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* --- Proposta --- */
+    .proposta-texto {
+        padding: 50px 30px;
+    }
+    .proposta-titulo {
+        font-size: 26px;
+    }
+    .proposta-desc {
+        max-width: 90%;
+        font-size: 15px;
+    }
+    
+   
+
+    /* --- Footer --- */
+    .footer-geral {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .footer-geral-blog {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .direitos {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* --- Blog pagina --- */
+    .heroContent-blog h1 {
+        font-size: 32px;
+    }
+    .blog-pagina-texto p,
+    .blog-pagina-texto li {
+        font-size: 16px;
+    }
 }
 
-.descricao{
-    font-size: 14px;
-}
+/* ===== MOBILE (até 700px) ===== */
+@media (max-width: 700px) {
+    /* --- Espaçamentos gerais --- */
+    .cabecalho {
+        padding: 0 16px;
+    }
+    .container-global {
+        padding: 0 16px;
+    }
+    .container {
+        padding: 25px 16px;
+        gap: 35px;
+    }
+    .footer-container {
+        padding: 0 16px;
+    }
+    .cabecalho-blog {
+        padding: 0 16px;
+    }
+    .container-hero-blog {
+        padding: 25px 16px;
+    }
+    .blog-pagina-container {
+        padding: 0 16px;
+    }
 
-.QuemSomos-container{
+    /* --- Hero --- */
+    .hero {
+        align-items: flex-start;
+    }
+    #hero-SubTitulo {
+        font-size: 10px;
+        max-width: 195px;
+    }
+    .heroContent h1 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+    #HeroTitulo {
+        font-size: 32px;
+    }
+    .heroContent p {
+        font-size: 13px;
+    }
+    .BtnHero {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .BtnHero-Proposta,
+    .BtnHero-Servico {
+        width: 100%;
+    }
 
-    flex-direction: column;
-}
-.QuemSomos-imagem img{
-    max-width: 800px;
-    width: 100%;
+    /* --- Estatísticas hero --- */
+    .heroInfo {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .heroinfo-geral {
+        width: 100%;
+        padding: 15px;
+    }
+    .heroinfo-texto h1 {
+        font-size: 20px;
+    }
+    .heroinfo-texto p {
+        font-size: 13px;
+    }
 
-}
-.QuemSomos-texto{
-    width: 100%;
-    justify-content: center;
-    gap: 15px;
-}
-.blog-container-imagem{
-    height: 150px;
-}
-.blog-card-container{
-    gap: 10px;
-}
+    /* --- Clientes/Carousel --- */
+    .carousel {
+        height: 220px;
+    }
 
-}
+    /* --- Quem Somos --- */
+    .QuemSomos-imagem img {
+        height: 240px;
+    }
+    .QuemSomos-imagem-texto {
+        width: 130px;
+        font-size: 13px;
+        padding: 15px 8px;
+    }
+    #QuemSomos-titulo-titulo {
+        font-size: 26px;
+    }
+    #QuemSomos-texto-desc {
+        font-size: 14px;
+    }
+    .QuemSomos-info-imagem p {
+        font-size: 13px;
+    }
 
+    /* --- Seções gerais --- */
+    .clientes,
+    .QuemSomos,
+    .mapa,
+    .servicos,
+    .portifolio,
+    .blog,
+    .contato {
+        padding: 60px 0;
+    }
 
-@media(max-width:700px){
-.cabecalho{
-    padding: 0 20px;
+    /* --- Títulos gerais --- */
+    .titulo {
+        font-size: 24px;
+    }
+    .subtitulo {
+        font-size: 11px;
+    }
+    .descricao {
+        font-size: 13px;
+    }
 
-}
-.container-global{
-    padding: 0 20px;
-}
-.container{
-    padding: 30px 20px;
-}
-.footer-container{
-    padding: 0 20px;
+    /* --- Mapa --- */
+    #mapa-imagem {
+        height: 300px;
+    }
 
-}
-.heroInfo{
-    flex-direction: column;
-    gap: 20px;
-}
-.heroinfo-geral{
-    width: 100%;
-}
-.blog-card{
-    display: flex;
-    flex-direction: column;
-}
-.blog-card-container{
-    gap: 15px;
-}
+    /* --- Serviços --- */
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- Portfólio --- */
+    .portifolio-grid {
+        grid-template-columns: 1fr;
+        margin: 20px auto;
+    }
+    .portifolio-enviar {
+        margin: 0 auto 30px;
+    }
+
+    /* --- Proposta --- */
+    .proposta-texto {
+        padding: 40px 20px;
+        border-radius: 12px;
+    }
+    .proposta-titulo {
+        font-size: 22px;
+    }
+    .proposta-desc {
+        max-width: 100%;
+        font-size: 14px;
+    }
+    .proposta-btn {
+        font-size: 13px;
+        padding: 14px 20px;
+    }
+    .proposta-container {
+        padding: 20px 16px;
+    }
+
+    /* --- Blog --- */
+    .blog-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .blog-card-titulo {
+        font-size: 17px;
+    }
+    .blog-container-imagem {
+        height: 160px;
+    }
+
+    /* --- Contato --- */
+    .contato-form-grid {
+        grid-template-columns: 1fr;
+    }
+    .contato-info {
+        padding: 25px 16px;
+    }
+    .contato-info-h1 {
+        font-size: 20px;
+    }
+    .contato-form input,
+    .contato-form select,
+    textarea {
+        font-size: 15px;
+        padding: 12px;
+    }
+    .contato-form-btn button {
+        width: 100%;
+    }
+
+    /* --- Footer --- */
+    .footer-geral,
+    .footer-geral-blog {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .direitos {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+    #footer-img {
+        max-width: 180px;
+    }
+
+    /* --- Blog páginas internas --- */
+    .hero-blog {
+        min-height: 35vh;
+    }
+    .heroContent-blog h1 {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+    #hero-blog-SubTitulo {
+        width: auto;
+        font-size: 11px;
+    }
+    .blog-pagina {
+        padding: 60px 0;
+    }
+    .blog-pagina-texto h1 {
+        font-size: 20px;
+    }
+    .blog-pagina-texto p,
+    .blog-pagina-texto li {
+        font-size: 15px;
+    }
 }
