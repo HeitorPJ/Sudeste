@@ -4,23 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudeste Ambiental</title>
-    <link rel="stylesheet" href="css\style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Sudeste Ambiental | Consultoria Ambiental & Geologia</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Scripts externos (carregados antes do body para o Leaflet funcionar) -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body>
+
+    <!-- ========== HEADER ========== -->
     <header>
         <div class="cabecalho">
             <div id="logo">
-                <img id="btnVoltarAoTopo" onclick="voltarAoTopo()" src="IMG/Logo-1.png">
+                <img id="btnVoltarAoTopo" onclick="voltarAoTopo()" src="IMG/Logo-1.png" alt="Sudeste Ambiental">
             </div>
-            <div id="btnsHeader">
+
+            <nav id="btnsHeader">
                 <div class="nav-item">
                     <p onclick="IrClientes()">Clientes</p>
                 </div>
@@ -42,21 +51,22 @@
                 <div class="nav-item">
                     <button id="SolicitarProposta" onclick="IrContato()">SOLICITAR PROPOSTA</button>
                 </div>
-            </div>
-            <div id="btn-menu"><img id="menu-icon" src="IMG/menu.svg" alt=""></div>
-        </div>
+            </nav>
 
+            <button id="btn-menu" aria-label="Abrir menu">
+                <img id="menu-icon" src="IMG/menu.svg" alt="Menu">
+            </button>
+        </div>
     </header>
+
+    <!-- ========== HERO ========== -->
     <section class="hero">
         <div class="container">
             <div class="heroContent">
-
                 <p id="hero-SubTitulo">Consultoria Ambiental & Geologia</p>
                 <h1>Soluções ambientais com <span id="HeroTitulo">excelência técnica</span></h1>
-
                 <p>Somos referência em consultoria ambiental e geologia, oferecendo soluções integradas para
                     licenciamento, remediação, hidrogeologia e muito mais.</p>
-
                 <div class="BtnHero">
                     <button class="BtnHero-Proposta" onclick="IrContato()">SOLICITAR PROPOSTA</button>
                     <button class="BtnHero-Servico" onclick="IrServicos()">NOSSOS SERVIÇOS</button>
@@ -65,27 +75,21 @@
 
             <div class="heroInfo">
                 <div class="heroinfo-geral">
-                    <div class="heroinfo-imagem">
-                        <img src="IMG/shield.svg" alt="">
-                    </div>
+                    <div class="heroinfo-imagem"><img src="IMG/shield.svg" alt="Projetos"></div>
                     <div class="heroinfo-texto">
                         <h1>500+</h1>
                         <p>Projetos Realizados</p>
                     </div>
                 </div>
                 <div class="heroinfo-geral">
-                    <div class="heroinfo-imagem">
-                        <img src="IMG/medal.svg" alt="">
-                    </div>
+                    <div class="heroinfo-imagem"><img src="IMG/medal.svg" alt="Experiência"></div>
                     <div class="heroinfo-texto">
                         <h1>15+</h1>
                         <p>Anos de Experiência</p>
                     </div>
                 </div>
                 <div class="heroinfo-geral">
-                    <div class="heroinfo-imagem">
-                        <img src="IMG/map-pin.svg" alt="">
-                    </div>
+                    <div class="heroinfo-imagem"><img src="IMG/map-pin.svg" alt="Estados"></div>
                     <div class="heroinfo-texto">
                         <h1>20+</h1>
                         <p>Estados Atendidos</p>
@@ -94,7 +98,11 @@
             </div>
         </div>
     </section>
+
+    <!-- ========== CONTEÚDO PRINCIPAL ========== -->
     <div class="container-global">
+
+        <!-- CLIENTES -->
         <section class="clientes" id="clientes">
             <div class="clientes-container">
                 <div class="titulo-geral">
@@ -104,24 +112,28 @@
                         ambientais e geológicas com qualidade, segurança e compromisso.</p>
                 </div>
                 <div class="carousel-wrapper">
-                    <button class="prev"><img src="IMG/arrow-left-carousel.svg" alt=""></button>
+                    <button class="prev" aria-label="Anterior">
+                        <img src="IMG/arrow-left-carousel.svg" alt="Anterior">
+                    </button>
                     <div class="carousel">
                         <div class="carousel-track">
-                            <img src="">
-                            <img src="g">
-                            <img src="">
+                            <img src="" alt="Cliente 1">
+                            <img src="" alt="Cliente 2">
+                            <img src="" alt="Cliente 3">
                         </div>
                     </div>
-                    <button class="next"><img src="IMG/arrow-right-carousel.svg" alt=""></button>
+                    <button class="next" aria-label="Próximo">
+                        <img src="IMG/arrow-right-carousel.svg" alt="Próximo">
+                    </button>
                 </div>
             </div>
         </section>
 
-
+        <!-- QUEM SOMOS -->
         <section class="QuemSomos" id="QuemSomos">
             <div class="QuemSomos-container">
                 <div class="QuemSomos-imagem">
-                    <img src="IMG\time.jpg" alt="">
+                    <img src="IMG/time.jpg" alt="Equipe Sudeste Ambiental">
                     <div class="QuemSomos-imagem-texto">
                         <h1>15+</h1>
                         <p>Anos de atuação</p>
@@ -137,9 +149,6 @@
                         soluções ambientais e geológicas. Com mais de 15 anos de experiência, atuamos em projetos de
                         alta complexidade em todo o Brasil, fornecendo laudos técnicos, estudos ambientais e
                         acompanhamento de licenciamentos.</p>
-
-                    <!-- Ultimas informacões com imagem check -->
-
                     <div class="QuemSomos-texto-info">
                         <div class="QuemSomos-info-imagem">
                             <img src="IMG/check.svg" alt="">
@@ -163,8 +172,7 @@
             </div>
         </section>
 
-
-
+        <!-- MAPA -->
         <section class="mapa">
             <div class="mapa-container">
                 <div class="titulo-geral">
@@ -173,11 +181,11 @@
                     <p class="descricao">Com projetos em todas as regiões do Brasil, levamos soluções ambientais e
                         geológicas onde nossos clientes mais precisam.</p>
                 </div>
-                <div id="mapa-imagem">
-                </div>
+                <div id="mapa-imagem"></div>
             </div>
         </section>
 
+        <!-- SERVIÇOS -->
         <section class="servicos" id="servicos">
             <div class="servicos-container">
                 <div class="titulo-geral">
@@ -188,7 +196,6 @@
                 </div>
 
                 <div class="cards">
-                    <!-- Primeiro-card -->
                     <div class="card">
                         <div class="card-container">
                             <img class="card-imagem" src="IMG/beaker.svg" alt="">
@@ -196,12 +203,11 @@
                             <p class="card-desc">Investigação, avaliação de risco e remediação de áreas com passivo
                                 ambiental.</p>
                             <div class="card-btn">
-                                <button class="card-btn-proposta">Solicitar Proposta</button>
+                                <button class="card-btn-proposta" onclick="IrContato()">Solicitar Proposta</button>
                                 <button class="card-btn-saiba">Saiba Mais</button>
                             </div>
                         </div>
                     </div>
-                    <!-- Segundo-card -->
                     <div class="card">
                         <div class="card-container">
                             <img class="card-imagem" src="IMG/water-drop.svg" alt="">
@@ -209,12 +215,11 @@
                             <p class="card-desc">Estudos de águas subterrâneas, poços de monitoramento e modelagem
                                 hidrológica.</p>
                             <div class="card-btn">
-                                <button class="card-btn-proposta">Solicitar Proposta</button>
+                                <button class="card-btn-proposta" onclick="IrContato()">Solicitar Proposta</button>
                                 <button class="card-btn-saiba">Saiba Mais</button>
                             </div>
                         </div>
                     </div>
-                    <!-- Terceiro-card -->
                     <div class="card">
                         <div class="card-container">
                             <img class="card-imagem" src="IMG/mountain.svg" alt="">
@@ -222,12 +227,11 @@
                             <p class="card-desc">Sondagens, ensaios geotécnicos e análise de estabilidade de taludes.
                             </p>
                             <div class="card-btn">
-                                <button class="card-btn-proposta">Solicitar Proposta</button>
+                                <button class="card-btn-proposta" onclick="IrContato()">Solicitar Proposta</button>
                                 <button class="card-btn-saiba">Saiba Mais</button>
                             </div>
                         </div>
                     </div>
-                    <!-- Quarto-card -->
                     <div class="card">
                         <div class="card-container">
                             <img class="card-imagem" src="IMG/satellite.svg" alt="">
@@ -235,12 +239,11 @@
                             <p class="card-desc">Mapeamento com drones, levantamentos topográficos e análise espacial.
                             </p>
                             <div class="card-btn">
-                                <button class="card-btn-proposta">Solicitar Proposta</button>
+                                <button class="card-btn-proposta" onclick="IrContato()">Solicitar Proposta</button>
                                 <button class="card-btn-saiba">Saiba Mais</button>
                             </div>
                         </div>
                     </div>
-                    <!-- Quinto-card -->
                     <div class="card">
                         <div class="card-container">
                             <img class="card-imagem" src="IMG/file-check.svg" alt="">
@@ -248,12 +251,11 @@
                             <p class="card-desc">Elaboração de estudos ambientais e acompanhamento de condicionantes.
                             </p>
                             <div class="card-btn">
-                                <button class="card-btn-proposta">Solicitar Proposta</button>
+                                <button class="card-btn-proposta" onclick="IrContato()">Solicitar Proposta</button>
                                 <button class="card-btn-saiba">Saiba Mais</button>
                             </div>
                         </div>
                     </div>
-                    <!-- Sexto-card -->
                     <div class="card">
                         <div class="card-container">
                             <img class="card-imagem" src="IMG/pickaxe.svg" alt="">
@@ -261,12 +263,11 @@
                             <p class="card-desc">Pesquisa mineral, cubagem de reservas e mapeamento geológico de
                                 detalhe.</p>
                             <div class="card-btn">
-                                <button class="card-btn-proposta">Solicitar Proposta</button>
+                                <button class="card-btn-proposta" onclick="IrContato()">Solicitar Proposta</button>
                                 <button class="card-btn-saiba">Saiba Mais</button>
                             </div>
                         </div>
                     </div>
-                    <!-- Sétimo-card -->
                     <div class="card">
                         <div class="card-container">
                             <img class="card-imagem" src="IMG/trash.svg" alt="">
@@ -274,7 +275,7 @@
                             <p class="card-desc">Gerenciamento de resíduos, PGRS e projetos de tratamento de efluentes.
                             </p>
                             <div class="card-btn">
-                                <button class="card-btn-proposta">Solicitar Proposta</button>
+                                <button class="card-btn-proposta" onclick="IrContato()">Solicitar Proposta</button>
                                 <button class="card-btn-saiba">Saiba Mais</button>
                             </div>
                         </div>
@@ -283,6 +284,7 @@
             </div>
         </section>
 
+        <!-- PORTFÓLIO -->
         <section class="portifolio" id="portifolio">
             <div class="portifolio-container">
                 <div class="titulo-geral">
@@ -294,45 +296,46 @@
 
                 <div class="portifolio-grid">
                     <div class="portifolio-imagem">
-                        <img src="IMG/escavacao.jpg" alt="">
+                        <img src="IMG/escavacao.jpg" alt="Remediação de área contaminada">
                         <div class="overlay-texto">
                             <p class="overlay-subtitulo">Áreas Contaminadas</p>
                             <h1 class="overlay-titulo">Remediação de área contaminada</h1>
                         </div>
                     </div>
                     <div class="portifolio-imagem">
-                        <img src="IMG/perfuracao.png" alt="">
+                        <img src="IMG/perfuracao.png" alt="Estudo hidrogeológico">
                         <div class="overlay-texto">
                             <p class="overlay-subtitulo">Hidrogeologia</p>
                             <h1 class="overlay-titulo">Estudo hidrogeológico</h1>
                         </div>
                     </div>
                     <div class="portifolio-imagem">
-                        <img src="IMG/drone.jpg" alt="">
+                        <img src="IMG/drone.jpg" alt="Levantamento topográfico com drone">
                         <div class="overlay-texto">
                             <p class="overlay-subtitulo">Topografia & RPAs</p>
                             <h1 class="overlay-titulo">Levantamento topográfico com drone</h1>
                         </div>
                     </div>
                     <div class="portifolio-imagem">
-                        <img src="IMG/analise.jpg" alt="">
+                        <img src="IMG/analise.jpg" alt="Operações de campo">
                         <div class="overlay-texto">
                             <p class="overlay-subtitulo">Operações em Campo</p>
                             <h1 class="overlay-titulo">Operações de campo</h1>
                         </div>
                     </div>
                 </div>
+
                 <div class="portifolio-enviar" onclick="abrirPopup()">
                     <img class="portifolio-enviar-img" src="IMG/send.svg" alt="">
                     <p class="portifolio-enviar-texto">RECEBER PORTIFÓLIO POR E-MAIL</p>
                 </div>
+
+                <!-- Popup -->
                 <div id="popup-email" class="popup-overlay">
                     <div class="popup-box">
-                        <button class="popup-close" onclick="fecharPopup()">✕</button>
-
+                        <button class="popup-close" onclick="fecharPopup()" aria-label="Fechar">✕</button>
                         <h2>Receba nosso portfólio</h2>
                         <p>Digite seu email para receber o material completo</p>
-
                         <form id="form-popup">
                             <input type="email" name="email-popup" placeholder="Seu email*" required>
                             <button type="submit">Receber</button>
@@ -342,6 +345,7 @@
             </div>
         </section>
 
+        <!-- PROPOSTA (CTA) -->
         <section class="proposta">
             <div class="proposta-container">
                 <div class="proposta-texto">
@@ -353,6 +357,7 @@
             </div>
         </section>
 
+        <!-- BLOG -->
         <section class="blog" id="blog">
             <div class="blog-container">
                 <div class="titulo-geral">
@@ -361,11 +366,12 @@
                     <p class="descricao">Artigos escritos pela nossa equipe para ajudar você a entender o universo
                         ambiental e geológico.</p>
                 </div>
+
                 <div class="blog-card">
                     <div class="blog-card-unitario">
                         <div class="blog-card-container">
                             <div class="blog-container-imagem">
-                                <img class="blog-card-imagem" src="" alt="">
+                                <img class="blog-card-imagem" src="" alt="Licenciamento Ambiental">
                             </div>
                             <div class="blog-card-data">
                                 <img class="blog-data-img" src="IMG/calendar.svg" alt="">
@@ -375,16 +381,16 @@
                             </h1>
                             <p class="blog-card-desc">O licenciamento ambiental é um dos procedimentos mais importantes
                                 para empresas que desenvolvem atividades com potencial impacto ao meio ambiente.</p>
-                            <button class="blog-card-btn" onclick="window.location.href='Licenciamento.html'">Ler artigo
-                                <img class="blog-btn-img" src="IMG/arrow-right.svg" alt=""></button>
-
+                            <button class="blog-card-btn" onclick="window.location.href='Licenciamento.html'">
+                                Ler artigo <img class="blog-btn-img" src="IMG/arrow-right.svg" alt="">
+                            </button>
                         </div>
                     </div>
 
                     <div class="blog-card-unitario">
                         <div class="blog-card-container">
                             <div class="blog-container-imagem">
-                                <img class="blog-card-imagem" src="" alt="">
+                                <img class="blog-card-imagem" src="" alt="Hidrogeologia">
                             </div>
                             <div class="blog-card-data">
                                 <img class="blog-data-img" src="IMG/calendar.svg" alt="">
@@ -394,16 +400,16 @@
                             </h1>
                             <p class="blog-card-desc">Saiba como são realizados os estudos hidrogeológicos e sua
                                 importância para o licenciamento.</p>
-                            <button class="blog-card-btn" onclick="window.location.href='blog2.html'">Ler artigo <img
-                                    class="blog-btn-img" src="IMG/arrow-right.svg" alt=""></button>
-
+                            <button class="blog-card-btn" onclick="window.location.href='blog2.html'">
+                                Ler artigo <img class="blog-btn-img" src="IMG/arrow-right.svg" alt="">
+                            </button>
                         </div>
                     </div>
 
                     <div class="blog-card-unitario">
                         <div class="blog-card-container">
                             <div class="blog-container-imagem">
-                                <img class="blog-card-imagem" src="" alt="">
+                                <img class="blog-card-imagem" src="" alt="Drones">
                             </div>
                             <div class="blog-card-data">
                                 <img class="blog-data-img" src="IMG/calendar.svg" alt="">
@@ -412,15 +418,16 @@
                             <h1 class="blog-card-titulo">Uso de drones (RPAs) no mapeamento ambiental e topográfico</h1>
                             <p class="blog-card-desc">Descubra as vantagens do uso de RPAs em levantamentos de campo e
                                 monitoramento ambiental.</p>
-                            <button class="blog-card-btn" onclick="window.location.href='blog3.html'">Ler artigo <img
-                                    class="blog-btn-img" src="IMG/arrow-right.svg" alt=""></button>
-
+                            <button class="blog-card-btn" onclick="window.location.href='blog3.html'">
+                                Ler artigo <img class="blog-btn-img" src="IMG/arrow-right.svg" alt="">
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- CONTATO -->
         <section class="contato" id="contato">
             <div class="contato-container">
                 <div class="titulo-geral">
@@ -429,7 +436,9 @@
                     <p class="descricao">Entre em contato e receba uma proposta personalizada para as necessidades da
                         sua empresa.</p>
                 </div>
+
                 <div class="contato-container-texto">
+                    <!-- Informações -->
                     <div class="contato-info">
                         <div class="contato-info-container">
                             <h1 class="contato-info-h1">Informações de Contato</h1>
@@ -472,6 +481,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Formulário -->
                     <div class="contato-form">
                         <form class="contato-form-container">
                             <div class="contato-form-grid">
@@ -481,35 +492,43 @@
                                 <input type="tel" name="telefone" placeholder="Telefone*" maxlength="15" required>
                             </div>
                             <div class="contato-form-opcoes">
-                                <select id="contato-form-servico" name="servico" required>
+                                <select name="servico" required>
                                     <option value="">Selecione o serviço de interesse*</option>
-                                    <option value="Gerenciamento de Áreas Contaminadas">Gerenciamento de Áreas Contaminadas</option>
+                                    <option value="Gerenciamento de Áreas Contaminadas">Gerenciamento de Áreas
+                                        Contaminadas</option>
                                     <option value="Hidrogeologia e Hidrologia">Hidrogeologia e Hidrologia</option>
-                                    <option value="Geotecnia e Geologia de Engenharia">Geotecnia e Geologia de Engenharia</option>
-                                    <option value="Geoprocessamento, RPAs e Topografia">Geoprocessamento, RPAs e Topografia</option>
+                                    <option value="Geotecnia e Geologia de Engenharia">Geotecnia e Geologia de
+                                        Engenharia</option>
+                                    <option value="Geoprocessamento, RPAs e Topografia">Geoprocessamento, RPAs e
+                                        Topografia</option>
                                     <option value="Licenciamento Ambiental">Licenciamento Ambiental</option>
-                                    <option value="Mineração e Mapeamento Geológico">Mineração e Mapeamento Geológico</option>
+                                    <option value="Mineração e Mapeamento Geológico">Mineração e Mapeamento Geológico
+                                    </option>
                                     <option value="Resíduos Sólidos e Efluentes">Resíduos Sólidos e Efluentes</option>
                                 </select>
-                                <input id="contato-form-desc" type="text" name="descricao" placeholder="Descreva brevemente seu projeto"></input>
+                                <input id="contato-form-desc" type="text" name="descricao"
+                                    placeholder="Descreva brevemente seu projeto">
                             </div>
                             <div class="contato-form-btn">
-
-                                <button type="submit"><img class="portifolio-enviar-img" src="IMG/send.svg"
-                                        alt="">ENVIAR MENSAGEM</button>
+                                <button type="submit">
+                                    <img class="portifolio-enviar-img" src="IMG/send.svg" alt="">
+                                    ENVIAR MENSAGEM
+                                </button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-
         </section>
-    </div>
+
+    </div><!-- fim .container-global -->
+
+    <!-- ========== FOOTER ========== -->
     <footer>
         <div class="footer-container">
             <div class="footer-geral">
                 <div class="footer-info">
-                    <img id="footer-img" src="IMG/Logo-1.png">
+                    <img id="footer-img" src="IMG/Logo-1.png" alt="Sudeste Ambiental">
                     <p>Soluções integradas em consultoria ambiental e geologia para empresas que buscam excelência
                         técnica e conformidade ambiental.</p>
                 </div>
@@ -539,9 +558,9 @@
                 <p>Consultoria Ambiental & Geologia</p>
             </div>
         </div>
-
-
     </footer>
+
+    <!-- Script principal -->
     <script src="js/java.js"></script>
 
 </body>

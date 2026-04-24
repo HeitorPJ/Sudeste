@@ -1,31 +1,103 @@
-/*----------------Reset---------------*/
-*{
+/* ==========================================================================
+   RESET
+   ========================================================================== */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*----------------Body---------------*/
-body{
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+body {
     padding-top: 60px;
     font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
 }
 
-header, footer{
+header {
+    overflow: visible;
+}
+
+footer {
     overflow: hidden;
 }
 
-/*----------------Font---------------*/
-.montserrat {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+input,
+textarea,
+select,
+button {
+    font-family: inherit;
 }
 
-/*--------------------Header-------------------*/
-header{
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border: 1px solid #00C4FF;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #a0a0a09f;
+}
+
+/* ==========================================================================
+   LAYOUT HELPERS
+   ========================================================================== */
+.container-global {
+    max-width: 1350px;
+    margin: auto;
+    padding: 0 80px;
+}
+
+.container {
+    max-width: 1350px;
+    margin: auto;
+    padding: 30px 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: flex-start;
+}
+
+.titulo-geral {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.subtitulo {
+    color: #008CC4;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.titulo {
+    font-size: 35px;
+    color: #2F2A2A;
+    max-width: 550px;
+    text-align: center;
+}
+
+.descricao {
+    color: #6d6d6d;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 16px;
+    max-width: 650px;
+    text-align: center;
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+header {
     top: 0;
     position: fixed;
     width: 100%;
@@ -34,8 +106,7 @@ header{
     z-index: 100;
 }
 
-/*--------Header-Container--------*/
-.cabecalho{
+.cabecalho {
     max-width: 1350px;
     margin: auto;
     height: 100%;
@@ -45,8 +116,7 @@ header{
     align-items: center;
 }
 
-/*--------Header-Logo--------*/
-#logo{
+#logo {
     position: relative;
     display: flex;
     align-items: center;
@@ -54,7 +124,7 @@ header{
     flex: 0 0 auto;
 }
 
-#logo img{
+#logo img {
     max-width: 250px;
     max-height: 60px;
     width: auto;
@@ -62,39 +132,33 @@ header{
     object-position: left;
     cursor: pointer;
     padding: 0 10px 0 0;
-
 }
 
-#btnVoltarAoTopo{
+#btnVoltarAoTopo {
     width: 100%;
 }
 
-
-/*--------Header-Botões--------*/
-
-
-#btnsHeader{
+#btnsHeader {
     color: rgb(210, 210, 210);
     gap: 25px;
     display: flex;
     cursor: pointer;
     align-items: center;
     margin-left: auto;
-
+    z-index: 999;
 }
 
-.nav-item{
+.nav-item {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
-.nav-item:hover{
+.nav-item:hover {
     color: #008CC4;
 }
 
-/*--------Header-Botão-Proposta--------*/
 #SolicitarProposta {
     color: white;
     background-color: #00B1EA;
@@ -104,42 +168,26 @@ header{
     cursor: pointer;
 }
 
-
-#btn-menu{
+#btn-menu {
     display: none;
     font-size: 30px;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
 }
 
-
-.container-global{
-    max-width: 1350px;
-    margin: auto;
-    padding: 0 80px;
-}
-/*-------------------Hero-------------------*/
-
+/* ==========================================================================
+   HERO
+   ========================================================================== */
 .hero {
     min-height: 100vh;
     background-image: linear-gradient(to right, rgba(0, 30, 60, 0.836), rgba(0, 30, 60, 0.589)), url('../IMG/imagem1.jpg');
     background-size: cover;
     background-position: center;
     color: white;
-    display: flex;              
+    display: flex;
     align-items: flex-start;
 }
-
-.container {
-    max-width: 1350px;
-    margin:  auto;
-    padding: 30px 80px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    justify-content: flex-start
-}
-
 
 .heroContent {
     width: 56%;
@@ -148,8 +196,7 @@ header{
     gap: 30px;
 }
 
-/*--------Hero-Texto--------*/
-#hero-SubTitulo{
+#hero-SubTitulo {
     color: #00C4FF;
     background-color: #005e79;
     padding: 3px 10px;
@@ -160,7 +207,7 @@ header{
     justify-content: center;
     border-radius: 12px;
     font-size: 15px;
-    border:1px solid #00C4FF;
+    border: 1px solid #00C4FF;
     backdrop-filter: blur(10px);
     font-weight: 600;
 }
@@ -169,18 +216,17 @@ header{
     font-size: 68px;
 }
 
-.heroContent span{
+.heroContent span {
     font-size: 20px;
 }
 
-#HeroTitulo{
+#HeroTitulo {
     color: #009ED7;
     font-size: 68px;
 }
 
-/*--------Hero-Botões--------*/
-.BtnHero{
-    display:flex;
+.BtnHero {
+    display: flex;
     gap: 15px;
 }
 
@@ -197,13 +243,13 @@ header{
 }
 
 .BtnHero-Proposta:hover {
-    box-shadow: 0 1px 5px rgba(255, 255, 255, 0.753)
+    box-shadow: 0 1px 5px rgba(255, 255, 255, 0.753);
 }
 
 .BtnHero-Servico {
     color: white;
-    background-color:transparent;
-    border:1.5px solid rgb(210, 210, 210);
+    background-color: transparent;
+    border: 1.5px solid rgb(210, 210, 210);
     padding: 16px;
     border-radius: 10px;
     cursor: pointer;
@@ -215,27 +261,24 @@ header{
     background-color: rgba(255, 255, 255, 0.212);
 }
 
-/*---------------Hero-div-info---------------*/ 
-
-.heroInfo{
+.heroInfo {
     display: flex;
     justify-content: space-between;
 }
 
-.heroinfo-geral{
+.heroinfo-geral {
     display: flex;
     justify-content: left;
     padding: 20px;
     width: 30%;
     border-radius: 16px;
-    background: rgba(255, 255, 255, 0.08); 
+    background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(10px);
     border: 1.5px solid rgba(255, 255, 255, 0.253);
     gap: 15px;
 }
 
-/*--------Hero-Info-Imagem--------*/
-.heroinfo-imagem img{
+.heroinfo-imagem img {
     display: flex;
     justify-content: center;
     max-width: 50px;
@@ -244,65 +287,39 @@ header{
     border-radius: 10px;
 }
 
-/*--------Hero-Info-Texto--------*/
-.heroinfo-texto h1{
+.heroinfo-texto h1 {
     font-size: 25px;
 }
 
-.heroinfo-texto p{
+.heroinfo-texto p {
     font-size: 15px;
     color: rgb(210, 210, 210);
 }
-/*-----------------------Titulos-gerais-----------------------*/
-.titulo-geral{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-.subtitulo{
-    color:#008CC4;
-    font-weight: 600;
-    font-size: 16px;
-}
-.titulo{
-    font-size: 35px;
-    color: #2F2A2A;
-    max-width: 550px;
-    text-align: center;
-}
-.descricao{
-    color: #6d6d6d;
-    font-weight: 400;
-    line-height: 1.4;
-    font-size: 16px;
-    max-width: 650px;
-    text-align: center;
+
+/* ==========================================================================
+   CLIENTES
+   ========================================================================== */
+.clientes {
+    padding: 100px 0;
 }
 
-/*-----------------------Clientes-----------------------*/
-.clientes{
-    padding: 100px 0px;
-}
-.clientes-container{
+.clientes-container {
     display: flex;
     flex-direction: column;
     gap: 70px;
     margin: auto;
-    padding: 0 0px;
 }
 
-/*--------Carousel--------*/
 .carousel-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .carousel {
     width: 100%;
     max-width: 1000px;
-    height: 350px;    
+    height: 350px;
     margin: auto;
     overflow: hidden;
     border-radius: 15px;
@@ -312,7 +329,6 @@ header{
     display: flex;
     height: 100%;
     transition: transform 0.5s ease;
-
 }
 
 .carousel-track img {
@@ -323,34 +339,33 @@ header{
     display: block;
 }
 
-
-.prev, .next {
-    background-color:transparent;
+.prev,
+.next {
+    background-color: transparent;
     border: none;
     border-radius: 10px;
     cursor: pointer;
 }
-.prev img, .next img{
+
+.prev img,
+.next img {
     width: 30px;
 }
-.prev { left: 10px; }
-.next { right: 10px; }
 
-
-/*-----------------------Quem-Somos-----------------------*/
-.QuemSomos{
-    padding: 100px 0px;
+/* ==========================================================================
+   QUEM SOMOS
+   ========================================================================== */
+.QuemSomos {
+    padding: 100px 0;
 }
 
-/*--------Quem-Somos-container--------*/
-.QuemSomos-container{
+.QuemSomos-container {
     display: flex;
     gap: 70px;
     margin: auto;
 }
 
-/*--------Quem-Somos-imagem--------*/
-.QuemSomos-imagem{
+.QuemSomos-imagem {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -365,11 +380,10 @@ header{
     border-radius: 12px;
 }
 
-/*--------Quem-Somos-imagem-texto--------*/
-.QuemSomos-imagem-texto{
+.QuemSomos-imagem-texto {
     margin-top: -40px;
     margin-left: auto;
-    margin-right: -40px;  
+    margin-right: -40px;
     color: white;
     background-color: #0079B1;
     padding: 20px 10px;
@@ -381,8 +395,7 @@ header{
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.555);
 }
 
-/*--------Quem-Somos-texto--------*/
-.QuemSomos-texto{
+.QuemSomos-texto {
     width: 50%;
     display: flex;
     justify-content: space-between;
@@ -391,33 +404,31 @@ header{
     align-items: flex-start;
 }
 
-/*--------Quem-Somos-titulo--------*/
-.QuemSomos-texto-titulo{
+.QuemSomos-texto-titulo {
     display: flex;
     flex-direction: column;
     gap: 13px;
 }
 
-#QuemSomos-texto-subtitulo{
-    color:#008CC4;
+#QuemSomos-texto-subtitulo {
+    color: #008CC4;
     font-weight: 600;
     font-size: 16px;
 }
-#QuemSomos-titulo-titulo{
+
+#QuemSomos-titulo-titulo {
     font-size: 40px;
     color: #2F2A2A;
 }
 
-/*--------Quem-Somos-descrição--------*/ 
-#QuemSomos-texto-desc{
+#QuemSomos-texto-desc {
     color: #6d6d6d;
     font-weight: 400;
     line-height: 1.4;
     font-size: 16px;
 }
 
-/*--------Quem-Somos-infos--------*/ 
-.QuemSomos-texto-info{
+.QuemSomos-texto-info {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -426,27 +437,31 @@ header{
     font-size: 15px;
 }
 
-.QuemSomos-info-imagem{
+.QuemSomos-info-imagem {
     display: flex;
     width: 100%;
     align-items: center;
     gap: 10px;
 }
-.QuemSomos-info-imagem img{
+
+.QuemSomos-info-imagem img {
     width: 35px;
 }
 
-/*-----------------------Mapa-----------------------*/
-.mapa{
+/* ==========================================================================
+   MAPA
+   ========================================================================== */
+.mapa {
     padding: 100px 0;
 }
 
-.mapa-container{
+.mapa-container {
     margin: auto;
     display: flex;
     flex-direction: column;
     gap: 70px;
 }
+
 #mapa-imagem {
     height: 450px;
     width: 100%;
@@ -454,20 +469,21 @@ header{
     border-radius: 15px;
 }
 
-/*-----------------------Serviços-----------------------*/
-.servicos{
-    padding: 100px 0px;
+/* ==========================================================================
+   SERVIÇOS
+   ========================================================================== */
+.servicos {
+    padding: 100px 0;
 }
 
-.servicos-container{
+.servicos-container {
     display: flex;
     flex-direction: column;
     gap: 70px;
     margin: auto;
 }
 
-/*-----------------------Serviços-card-----------------------*/
-.cards{
+.cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -476,14 +492,13 @@ header{
     width: 100%;
 }
 
-/*--------Card--------*/
-.card{
+.card {
     width: 100%;
     min-width: 0;
     transition: transform 0.5s ease;
 }
 
-.card-container{
+.card-container {
     width: 100%;
     height: 100%;
     padding: 30px 35px;
@@ -492,49 +507,45 @@ header{
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.370);
     background-color: white;
     display: flex;
-    flex-direction: column;     
+    flex-direction: column;
     gap: 20px;
 }
 
-/*--------Card-hover--------*/
 .card:hover {
     transform: translateY(-5px);
-    border-radius: 10px 8px;
 }
-.card:hover .card-container{
+
+.card:hover .card-container {
     border-color: #00C4FF;
 }
 
-/*--------Card-imagem--------*/ 
-.card-imagem{
+.card-imagem {
     max-width: 55px;
     background-color: rgba(209, 208, 208, 0.411);
     padding: 8px;
     border-radius: 10px;
 }
 
-/*--------Card-texto--------*/ 
-.card-titulo{
+.card-titulo {
     font-size: 18px;
     color: #0B151E;
 }
-.card-desc{
+
+.card-desc {
     font-size: 15px;
     color: #6d6d6d;
 }
 
-/*--------Card-botões--------*/ 
-.card-btn{
+.card-btn {
     display: flex;
     gap: 15px;
-    flex-wrap: wrap;    
     flex-direction: column;
     margin-top: auto;
-    margin-bottom: 0;
 }
 
-.card-btn-proposta{
-    color:#008CC4;
+.card-btn-proposta,
+.card-btn-saiba {
+    color: #008CC4;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -542,52 +553,46 @@ header{
     padding: 8px;
 }
 
-.card-btn-saiba{
-    color:#008CC4;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-weight: 600;
-    padding: 8px;
-}
-.card-btn-proposta:hover, .card-btn-saiba:hover {
+.card-btn-proposta:hover,
+.card-btn-saiba:hover {
     padding: 7px;
-    border:1px solid #00C4FF;
+    border: 1px solid #00C4FF;
     background-color: #0079B1;
     border-radius: 5px;
     color: white;
 }
 
-/*-----------------------Portifólio-----------------------*/
-.portifolio{
-    padding: 100px 0px;
+/* ==========================================================================
+   PORTFÓLIO
+   ========================================================================== */
+.portifolio {
+    padding: 100px 0;
 }
 
-.portifolio-container{
+.portifolio-container {
     margin: auto;
     display: flex;
     flex-direction: column;
     gap: 70px;
 }
 
-.portifolio-grid{
+.portifolio-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap:25px;
+    gap: 25px;
     max-width: 1350px;
     width: 100%;
-    margin: 40px auto;     
+    margin: 40px auto;
 }
 
-/*--------Portifólio-Imagem--------*/ 
-.portifolio-imagem{
+.portifolio-imagem {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
     border: 1px solid transparent;
 }
 
-.portifolio-imagem img{
+.portifolio-imagem img {
     width: 100%;
     height: 100%;
     aspect-ratio: 16/10;
@@ -597,8 +602,7 @@ header{
     transition: transform 0.4s ease;
 }
 
-/*--------Portifólio-Overlay-Texto--------*/ 
-.overlay-texto{
+.overlay-texto {
     position: absolute;
     bottom: 20px;
     left: 20px;
@@ -611,12 +615,12 @@ header{
     gap: 10px;
 }
 
-.overlay-titulo{
+.overlay-titulo {
     font-size: 20px;
     color: white;
 }
 
-.overlay-subtitulo{
+.overlay-subtitulo {
     color: #00C4FF;
     background-color: #005e79;
     padding: 3px 10px;
@@ -624,45 +628,39 @@ header{
     align-self: flex-start;
     border-radius: 12px;
     font-size: 13px;
-    border:1px solid #00C4FF;
+    border: 1px solid #00C4FF;
 }
 
-/*--------Portifólio-hover--------*/ 
-.portifolio-imagem::after{
+.portifolio-imagem::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.6),
-        rgba(0, 0, 0, 0)
-    );
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
     opacity: 0;
     transition: all 0.3s ease;
     z-index: 1;
 }
 
-.portifolio-imagem:hover::after{
+.portifolio-imagem:hover::after {
     opacity: 1;
 }
 
-.portifolio-imagem:hover img{
+.portifolio-imagem:hover img {
     transform: scale(1.08);
 }
 
-.portifolio-imagem:hover .overlay-texto{
+.portifolio-imagem:hover .overlay-texto {
     opacity: 1;
     transform: translateY(0);
 }
 
-/*--------Portifólio-Enviar--------*/ 
-.portifolio-enviar{
+.portifolio-enviar {
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 400px;
     width: 100%;
-    margin: -50px auto 40px;      
+    margin: -50px auto 40px;
     background-color: #018AB0;
     padding: 15px 12px;
     border-radius: 10px 8px;
@@ -671,37 +669,35 @@ header{
     transition: transform 0.5s ease;
 }
 
-/*--------Portifólio-Enviar-img--------*/
-.portifolio-enviar-img{
+.portifolio-enviar:hover {
+    transform: translateY(-3px);
+}
+
+.portifolio-enviar-img {
     display: flex;
     justify-content: center;
     max-width: 25px;
     border-radius: 10px;
 }
 
-/*--------Portifólio-Enviar-texto--------*/
-.portifolio-enviar-texto{
+.portifolio-enviar-texto {
     color: white;
     font-weight: 600;
 }
 
-.portifolio-enviar:hover{
-    transform: translateY(-3px);
-}
-
+/* ==========================================================================
+   POPUP
+   ========================================================================== */
 .popup-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-
     background: rgba(0, 0, 0, 0.6);
-    
     display: flex;
     align-items: center;
     justify-content: center;
-
     opacity: 0;
     pointer-events: none;
     transition: 0.3s ease;
@@ -751,37 +747,35 @@ header{
     align-items: center;
     justify-content: center;
 }
-#form-popup{
+
+#form-popup {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-#form-popup input, #form-popup button{
+
+#form-popup input,
+#form-popup button {
     font-weight: 700;
 }
 
-/*-----------------------Proposta-----------------------*/
-.proposta{
-    padding: 0px 0px 20px;
-    gap: 70px;
+/* ==========================================================================
+   PROPOSTA (CTA)
+   ========================================================================== */
+.proposta {
+    padding: 0 0 20px;
 }
 
-.proposta-container{
-    margin:  auto;
-    padding: 30px 0px;
-    width: 100%;
+.proposta-container {
+    margin: auto;
+    padding: 30px 0;
+    width: 80%;
     display: flex;
-    gap: 50px;
     justify-content: center;
 }
 
-/*--------Proposta-texto--------*/
-.proposta-texto{
-    background: linear-gradient(
-        to right,
-        #018AB0,
-        #002c38
-    );
+.proposta-texto {
+    background: linear-gradient(to right, #018AB0, #002c38);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -792,22 +786,21 @@ header{
     gap: 30px;
 }
 
-.proposta-titulo{
+.proposta-titulo {
     color: white;
     font-size: 35px;
     text-align: center;
 }
 
-.proposta-desc{
-    color:#9e9e9e;
+.proposta-desc {
+    color: #9e9e9e;
     font-weight: 600;
     font-size: 17px;
     max-width: 55%;
     text-align: center;
 }
 
-/*--------Proposta-botão--------*/
-.proposta-btn{
+.proposta-btn {
     color: white;
     background-color: #018AB0;
     padding: 17px 25px;
@@ -817,20 +810,21 @@ header{
     cursor: pointer;
 }
 
-/*-----------------------Blog-----------------------*/
-.blog{
-    padding: 100px 0px;
+/* ==========================================================================
+   BLOG (home)
+   ========================================================================== */
+.blog {
+    padding: 100px 0;
 }
 
-.blog-container{
+.blog-container {
     display: flex;
     flex-direction: column;
     gap: 70px;
     margin: auto;
 }
 
-/*--------Blog-card--------*/
-.blog-card{
+.blog-card {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
     gap: 30px;
@@ -839,69 +833,71 @@ header{
     width: 100%;
 }
 
-
-.blog-card-unitario{
+.blog-card-unitario {
     width: 100%;
     min-width: 0;
     transition: transform 0.5s ease;
 }
 
-.blog-card-container{
+.blog-card-container {
     width: 100%;
     height: 100%;
     border-radius: 10px;
     border: 1px solid transparent;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.370);
     display: flex;
-    flex-direction: column;     
+    flex-direction: column;
     gap: 20px;
-    cursor:context-menu;    
+    cursor: context-menu;
 }
 
-/*--------Blog-imagem--------*/
-.blog-container-imagem{
+.blog-container-imagem {
     width: 100%;
     height: 200px;
     background-color: #0079B1;
     border-radius: 10px 10px 0 0;
-    padding: 0;
+    overflow: hidden;
 }
 
-/*--------Blog-Texto--------*/
-.blog-card-data{
+.blog-card-imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-card-data {
     display: flex;
     gap: 5px;
     padding: 0 25px;
 }
 
-.blog-data-img{
+.blog-data-img {
     width: 15px;
     height: 100%;
 }
 
-.blog-card-subtitulo{
+.blog-card-subtitulo {
     font-size: 12px;
     color: #6d6d6d;
 }
 
-.blog-card-titulo{
+.blog-card-titulo {
     font-size: 20px;
     padding: 0 25px;
 }
 
-.blog-card-desc{
+.blog-card-desc {
     font-size: 15px;
     color: #6d6d6d;
     padding: 0 25px;
 }
 
-/*--------Blog-botão--------*/
-.blog-btn-img{
+.blog-btn-img {
     width: 20px;
 }
 
-.blog-card-btn{
-    margin-top:auto;
+.blog-card-btn {
+    margin-top: auto;
     border: none;
     background-color: transparent;
     font-size: 15px;
@@ -913,39 +909,35 @@ header{
     padding: 0 25px 20px;
 }
 
-/*--------Blog-hover--------*/
-.blog-card-container:hover{
+.blog-card-container:hover {
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.452);
 }
 
-.blog-card-unitario:hover .blog-card-titulo{
+.blog-card-unitario:hover .blog-card-titulo {
     color: #008CC4;
 }
 
-/*-----------------------Contato-----------------------*/
-.contato{
-    padding: 100px 0px;
+/* ==========================================================================
+   CONTATO
+   ========================================================================== */
+.contato {
+    padding: 100px 0;
 }
 
-.contato-container{
+.contato-container {
     display: flex;
     flex-direction: column;
     gap: 70px;
     margin: auto;
-    gap: 70px;
 }
-.contato-container-texto{
+
+.contato-container-texto {
     display: flex;
     gap: 40px;
 }
 
-.contato-info{
-    background: linear-gradient(
-        to right,
-        #002c38,
-        #018AB0
-        
-    );
+.contato-info {
+    background: linear-gradient(to right, #002c38, #018AB0);
     border-radius: 15px;
     padding: 30px 25px;
     width: 40%;
@@ -953,19 +945,20 @@ header{
     flex-direction: column;
     gap: 30px;
 }
-.contato-info-container{
+
+.contato-info-container {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.contato-info-item{
+.contato-info-item {
     display: flex;
     align-items: center;
     gap: 15px;
 }
-.contato-item-imagem{
-    
+
+.contato-item-imagem {
     padding: 10px;
     display: flex;
     align-items: center;
@@ -973,71 +966,69 @@ header{
     border-radius: 10px;
     max-height: 40px;
 }
-.contato-item-imagem img{
-    width: 20px;    
+
+.contato-item-imagem img {
+    width: 20px;
     max-height: 20px;
-    
 }
 
-.contato-item-texto{
+.contato-item-texto {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
-.contato-info-h1{
+
+.contato-info-h1 {
     color: white;
     font-size: 25px;
 }
-.contato-item-h1{
+
+.contato-item-h1 {
     font-size: 13px;
     font-weight: 600;
-    color: #9e9e9e
+    color: #9e9e9e;
 }
-.contato-item-p{
+
+.contato-item-p {
     color: white;
     font-size: 13px;
 }
-.contato-form{
+
+.contato-form {
     width: 60%;
 }
-.contato-form-container{
+
+.contato-form-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.contato-form input{
-    border-radius: 5px;
-    padding: 5px;
-    
-    border: 1px solid #6d6d6d;
-    display: flex;
-    gap: 10px;
-}
-.contato-form-grid{
+
+.contato-form-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px; 
+    gap: 20px;
     width: 100%;
 }
 
-.contato-form-opcoes{
+.contato-form-opcoes {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
+
 .contato-form input,
-.contato-form select{
-    width: 100%; 
+.contato-form select {
+    width: 100%;
     border-radius: 10px;
     padding: 15px;
     border: 1px solid #a0a0a09f;
     font-size: 18px;
 }
 
-#contato-form-desc{
+#contato-form-desc {
     width: 100%;
     height: 120px;
-
     padding: 15px;
     border-radius: 10px;
     border: 1px solid #a0a0a09f;
@@ -1045,9 +1036,7 @@ header{
     resize: none;
 }
 
-
-
-.contato-form-btn button{
+.contato-form-btn button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1062,32 +1051,21 @@ header{
     background-color: #018AB0;
     cursor: pointer;
 }
-.contato-form-btn button img{
+
+.contato-form-btn button img {
     width: 20px;
 }
-input:focus,
-textarea:focus,
-select:focus{
-    outline: none;
-    border: 1px solid #00C4FF;
-}
-input,
-textarea,
-select,
-button{
-    font-family: inherit;
-}
 
-/*-----------------------Footer-----------------------*/
-footer{
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+footer {
     background-color: #2F2A2A;
     width: 100%;
-    padding: 50px 0px;    
+    padding: 50px 0;
 }
 
-/* CONTAINER CENTRAL */
-.footer-container{
-
+.footer-container {
     display: flex;
     flex-direction: column;
     max-width: 1350px;
@@ -1096,56 +1074,56 @@ footer{
     padding: 0 80px;
 }
 
-.footer-geral{
+.footer-geral {
     display: flex;
     gap: 40px;
 }
-.footer-geral > div{
+
+.footer-geral>div {
     flex: 1;
 }
-.footer-info, .footer-servicos, .footer-navegacao{
+
+.footer-info,
+.footer-servicos,
+.footer-navegacao {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-/* IMAGEM */
-#footer-img{
+#footer-img {
     max-width: 250px;
     width: 100%;
 }
 
-
-.footer-container h1{
+.footer-container h1 {
     color: white;
     font-size: 18px;
 }
 
-.footer-container p{
+.footer-container p {
     color: #6d6d6d;
     font-weight: 500;
 }
-.btnsfooter{
+
+.btnsfooter {
     cursor: pointer;
 }
-.btnsfooter:hover{
+
+.btnsfooter:hover {
     color: #008CC4;
 }
 
-.direitos{
+.direitos {
     display: flex;
     justify-content: space-between;
     font-size: 12px;
 }
-hr{
-    border: none;              
-    height: 1px;              
-    background-color: #a0a0a09f;
-}
 
-/*-----------------------Pagina-Blog-----------------------*/
-
-.cabecalho-blog{
+/* ==========================================================================
+   PÁGINAS DE BLOG (internas)
+   ========================================================================== */
+.cabecalho-blog {
     max-width: 1350px;
     margin: auto;
     height: 100%;
@@ -1154,50 +1132,37 @@ hr{
     justify-content: center;
     align-items: center;
 }
-#logo-blog img{
+
+#logo-blog img {
     max-width: 300px;
-    max-height: 60px; 
+    max-height: 60px;
     width: auto;
     object-fit: cover;
     object-position: center;
     cursor: pointer;
     padding: 5px 10px 0 0;
-
-}
-.btnVoltar-blog{
-    width: 100%;
 }
 
-#SolicitarProposta-blog{
-    cursor: pointer;
-    color: white;
-    background-color: #00B1EA;
-    border-radius: 10px;
-    border: none;
-    padding: 8px 20px;
-    margin-right: -10px;
-}
 .hero-blog {
     min-height: 45vh;
     background-image: linear-gradient(to right, rgba(0, 30, 60, 0.836), rgba(0, 30, 60, 0.589)), url('../IMG/imagem1.jpg');
     background-size: cover;
     background-position: center;
     color: white;
-    display: flex;              
+    display: flex;
     align-items: flex-start;
 }
 
 .container-hero-blog {
     max-width: 1200px;
-    margin:  auto;
+    margin: auto;
     padding: 30px 80px;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 50px;
-    justify-content: flex-start
+    justify-content: flex-start;
 }
-
 
 .heroContent-blog {
     width: 100%;
@@ -1206,8 +1171,7 @@ hr{
     gap: 15px;
 }
 
-/*--------Hero-Texto--------*/
-#hero-blog-SubTitulo{
+#hero-blog-SubTitulo {
     color: #00C4FF;
     background-color: #005e79;
     padding: 3px 10px;
@@ -1217,7 +1181,7 @@ hr{
     justify-content: center;
     border-radius: 12px;
     font-size: 15px;
-    border:1px solid #00C4FF;
+    border: 1px solid #00C4FF;
     backdrop-filter: blur(10px);
     font-weight: 600;
 }
@@ -1225,20 +1189,19 @@ hr{
 .heroContent-blog h1 {
     font-size: 48px;
 }
+
 .heroContent-blog p {
     font-size: 15px;
     color: #adadad;
 }
 
-
-.blog-pagina{
-    padding: 100px 0px;
+.blog-pagina {
+    padding: 100px 0;
 }
 
-.blog-pagina-container{
+.blog-pagina-container {
     max-width: 1000px;
     margin: auto;
-    height: 100%;
     padding: 0 80px;
     display: flex;
     align-items: center;
@@ -1246,141 +1209,157 @@ hr{
     gap: 40px;
 }
 
-.blog-pagina-btn-voltar{
+.blog-pagina-btn-voltar {
     display: flex;
     margin-right: auto;
-    margin-top:auto;
     border: none;
     background-color: transparent;
     font-size: 15px;
     font-weight: 600;
-    display: flex;
     color: #008CC4;
     gap: 3px;
     cursor: pointer;
 }
-.blog-pagina-texto{
+
+.blog-pagina-texto {
     display: flex;
     flex-direction: column;
     gap: 25px;
     line-height: 1.5;
 }
-.blog-pagina-texto h1{
+
+.blog-pagina-texto h1 {
     font-size: 25px;
 }
 
-.blog-pagina-texto p{
+.blog-pagina-texto p {
     color: rgb(107, 107, 107);
     font-size: 18px;
 }
-.blog-pagina-texto li{
+
+.blog-pagina-texto li {
     color: rgb(107, 107, 107);
     font-size: 18px;
 }
-.blog-pagina-texto ul{
-    padding-left: 20px; 
+
+.blog-pagina-texto ul {
+    padding-left: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
-}
-.blog-pagina-texto li::marker {
-    color: #008CC4; /* sua cor */
 }
 
-.footer-geral-blog{
+.blog-pagina-texto li::marker {
+    color: #008CC4;
+}
+
+.footer-geral-blog {
     display: flex;
     gap: 90px;
 }
-.footer-geral-blog > div{
+
+.footer-geral-blog>div {
     flex: 1;
 }
-.footer-servicos-blog{
+
+.footer-servicos-blog {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-/*-----------------------Responsividade-----------------------*/
 
-/* ===== TABLET (até 1024px) ===== */
+/* ==========================================================================
+   RESPONSIVIDADE
+   ========================================================================== */
+
+/* ----- Tablet grande (até 1024px) ----- */
 @media (max-width: 1024px) {
     header {
-    height: 50px;
-}
-body {
-    padding-top: 50px;
-}
-#btnsHeader {
-    top: 50px;
-}
+        height: 50px;
+    }
+
+    body {
+        padding-top: 50px;
+    }
+
+    #btnsHeader {
+        top: 50px;
+    }
+
     .heroContent h1 {
         font-size: 52px;
     }
+
     #HeroTitulo {
         font-size: 52px;
     }
+
     .heroContent {
         width: 70%;
     }
+
     .portifolio-grid {
         gap: 15px;
     }
+
     .proposta-texto {
         padding: 50px 40px;
     }
+
     .proposta-titulo {
         font-size: 28px;
     }
+
     .proposta-desc {
         max-width: 75%;
     }
-    
 }
 
-/* ===== CONTATO (até 1000px) ===== */
+/* ----- Contato empilha (até 1000px) ----- */
 @media (max-width: 1000px) {
     .contato-container-texto {
         flex-direction: column;
     }
+
     .contato-info {
         width: 100%;
     }
+
     .contato-form {
         width: 100%;
     }
-    
 }
 
-/* ===== TABLET MÉDIO (até 950px) ===== */
+/* ----- Tablet médio (até 950px) ----- */
 @media (max-width: 950px) {
-    /* --- Espaçamentos gerais --- */
-    .cabecalho {
-        padding: 0 30px;
-    }
-    .container-global {
-        padding: 0 30px;
-    }
-    .container {
-        padding: 30px 30px;
-    }
+
+    .cabecalho,
     .footer-container {
         padding: 0 30px;
     }
-    .cabecalho-blog {
+
+    .container-global {
         padding: 0 30px;
     }
-    .container-hero-blog {
-        padding: 30px 30px;
+
+    .container {
+        padding: 30px;
     }
+
+    .cabecalho-blog,
+    .container-hero-blog {
+        padding: 30px;
+    }
+
     .blog-pagina-container {
         padding: 0 30px;
     }
 
-    /* --- Menu hambúrguer --- */
+    /* Menu hambúrguer */
     #btnsHeader {
         display: none;
         position: absolute;
-        top: 60px;
+        top: 50px;
         right: 0;
         background-color: #2F2A2A;
         width: 100%;
@@ -1389,116 +1368,128 @@ body {
         gap: 20px;
         z-index: 999;
     }
+
     #btnsHeader.active {
         display: flex;
     }
+
     #btn-menu {
         display: flex;
         align-items: center;
         justify-content: center;
     }
+
     #btn-menu img {
         width: 35px;
     }
 
-    /* --- Hero --- */
+    /* Hero */
     #hero-SubTitulo {
         font-size: 11px;
         max-width: 220px;
     }
+
     .heroContent {
         width: 100%;
     }
+
     .heroContent h1 {
         font-size: 42px;
     }
+
     .heroContent p {
         font-size: 14px;
     }
+
     #HeroTitulo {
         font-size: 42px;
     }
+
     .heroInfo {
         flex-direction: column;
         gap: 15px;
     }
+
     .heroinfo-geral {
         width: 100%;
     }
 
-    /* --- Títulos gerais --- */
+    /* Títulos */
     .subtitulo {
         font-size: 12px;
     }
+
     .titulo {
         font-size: 28px;
     }
+
     .descricao {
         font-size: 14px;
     }
 
-    /* --- Quem Somos --- */
+    /* Quem Somos */
     .QuemSomos-container {
         flex-direction: column;
         gap: 40px;
     }
+
     .QuemSomos-imagem img {
         max-width: 100%;
         width: 100%;
         height: 300px;
     }
+
     .QuemSomos-imagem-texto {
-        margin-right: 0;
-        margin-left: 0;
         align-self: flex-end;
         margin-top: -40px;
         margin-right: 10px;
     }
+
     .QuemSomos-texto {
         width: 100%;
         gap: 20px;
     }
+
     #QuemSomos-titulo-titulo {
         font-size: 30px;
     }
 
-    /* --- Portfólio --- */
+    /* Portfólio */
     .portifolio-grid {
-        grid-template-columns: 2fr;
+        grid-template-columns: 1fr;
     }
 
-    /* --- Blog --- */
+    /* Blog home */
     .blog-container-imagem {
         height: 160px;
     }
+
     .blog-card {
         grid-template-columns: 1fr;
         gap: 20px;
     }
 
-    /* --- Proposta --- */
+    /* Proposta */
     .proposta-texto {
         padding: 50px 30px;
     }
+
     .proposta-titulo {
         font-size: 26px;
     }
+
     .proposta-desc {
         max-width: 90%;
         font-size: 15px;
     }
-    
-   
 
-    /* --- Footer --- */
-    .footer-geral {
-        flex-direction: column;
-        gap: 30px;
-    }
+    /* Footer */
+    .footer-geral,
     .footer-geral-blog {
         flex-direction: column;
         gap: 30px;
     }
+
     .direitos {
         flex-direction: column;
         gap: 5px;
@@ -1506,110 +1497,115 @@ body {
         text-align: center;
     }
 
-    /* --- Blog pagina --- */
+    /* Blog interno */
     .heroContent-blog h1 {
         font-size: 32px;
     }
+
     .blog-pagina-texto p,
     .blog-pagina-texto li {
         font-size: 16px;
     }
 }
 
-/* ===== MOBILE (até 700px) ===== */
+/* ----- Mobile (até 700px) ----- */
 @media (max-width: 700px) {
-    /* --- Espaçamentos gerais --- */
-    .cabecalho {
+
+    .cabecalho,
+    .footer-container {
         padding: 0 16px;
     }
+
     .container-global {
         padding: 0 16px;
     }
+
     .container {
         padding: 25px 16px;
         gap: 35px;
     }
-    .footer-container {
-        padding: 0 16px;
-    }
-    .cabecalho-blog {
-        padding: 0 16px;
-    }
+
+    .cabecalho-blog,
     .container-hero-blog {
         padding: 25px 16px;
     }
+
     .blog-pagina-container {
         padding: 0 16px;
     }
 
-    /* --- Hero --- */
-    .hero {
-        align-items: flex-start;
-    }
+    /* Hero */
     #hero-SubTitulo {
         font-size: 10px;
         max-width: 195px;
     }
+
     .heroContent h1 {
         font-size: 32px;
         line-height: 1.2;
     }
+
     #HeroTitulo {
         font-size: 32px;
     }
+
     .heroContent p {
         font-size: 13px;
     }
+
     .BtnHero {
         flex-direction: column;
         gap: 10px;
     }
+
     .BtnHero-Proposta,
     .BtnHero-Servico {
         width: 100%;
     }
 
-    /* --- Estatísticas hero --- */
-    .heroInfo {
-        flex-direction: column;
-        gap: 12px;
-    }
+    /* Stats */
     .heroinfo-geral {
         width: 100%;
         padding: 15px;
     }
+
     .heroinfo-texto h1 {
         font-size: 20px;
     }
+
     .heroinfo-texto p {
         font-size: 13px;
     }
 
-    /* --- Clientes/Carousel --- */
+    /* Carousel */
     .carousel {
         height: 220px;
     }
 
-    /* --- Quem Somos --- */
+    /* Quem Somos */
     .QuemSomos-imagem img {
         height: 240px;
     }
+
     .QuemSomos-imagem-texto {
         width: 130px;
         font-size: 13px;
         padding: 15px 8px;
     }
+
     #QuemSomos-titulo-titulo {
         font-size: 26px;
     }
+
     #QuemSomos-texto-desc {
         font-size: 14px;
     }
+
     .QuemSomos-info-imagem p {
         font-size: 13px;
     }
 
-    /* --- Seções gerais --- */
+    /* Padding das seções */
     .clientes,
     .QuemSomos,
     .mapa,
@@ -1620,121 +1616,141 @@ body {
         padding: 60px 0;
     }
 
-    /* --- Títulos gerais --- */
+    /* Títulos */
     .titulo {
         font-size: 24px;
     }
+
     .subtitulo {
         font-size: 11px;
     }
+
     .descricao {
         font-size: 13px;
     }
 
-    /* --- Mapa --- */
+    /* Mapa */
     #mapa-imagem {
         height: 300px;
     }
 
-    /* --- Serviços --- */
+    /* Serviços */
     .cards {
         grid-template-columns: 1fr;
     }
 
-    /* --- Portfólio --- */
+    /* Portfólio */
     .portifolio-grid {
         grid-template-columns: 1fr;
         margin: 20px auto;
     }
+
     .portifolio-enviar {
         margin: 0 auto 30px;
     }
 
-    /* --- Proposta --- */
+    /* Proposta */
     .proposta-texto {
         padding: 40px 20px;
         border-radius: 12px;
     }
+
     .proposta-titulo {
         font-size: 22px;
     }
+
     .proposta-desc {
         max-width: 100%;
         font-size: 14px;
     }
+
     .proposta-btn {
         font-size: 13px;
         padding: 14px 20px;
     }
+
     .proposta-container {
         padding: 20px 16px;
     }
 
-    /* --- Blog --- */
+    /* Blog home */
     .blog-card {
         grid-template-columns: 1fr;
         gap: 20px;
     }
+
     .blog-card-titulo {
         font-size: 17px;
     }
+
     .blog-container-imagem {
         height: 160px;
     }
 
-    /* --- Contato --- */
+    /* Contato */
     .contato-form-grid {
         grid-template-columns: 1fr;
     }
+
     .contato-info {
         padding: 25px 16px;
     }
+
     .contato-info-h1 {
         font-size: 20px;
     }
+
     .contato-form input,
     .contato-form select,
-    textarea {
+    #contato-form-desc {
         font-size: 15px;
         padding: 12px;
     }
+
     .contato-form-btn button {
         width: 100%;
     }
 
-    /* --- Footer --- */
+    /* Footer */
     .footer-geral,
     .footer-geral-blog {
         flex-direction: column;
         gap: 25px;
     }
+
     .direitos {
         flex-direction: column;
         gap: 5px;
         text-align: center;
     }
+
     #footer-img {
         max-width: 180px;
     }
 
-    /* --- Blog páginas internas --- */
+    /* Blog interno */
     .hero-blog {
         min-height: 35vh;
     }
+
     .heroContent-blog h1 {
         font-size: 24px;
         line-height: 1.3;
     }
+
     #hero-blog-SubTitulo {
         width: auto;
         font-size: 11px;
     }
+
     .blog-pagina {
         padding: 60px 0;
     }
+
     .blog-pagina-texto h1 {
         font-size: 20px;
     }
+
     .blog-pagina-texto p,
     .blog-pagina-texto li {
         font-size: 15px;
