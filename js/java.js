@@ -15,6 +15,23 @@ function trocarLogo() {
 window.addEventListener("resize", trocarLogo);
 trocarLogo();
 
+/* ========================================================================== 
+HEADER TRANSPARENTE NO TOPO 
+========================================================================== */
+const header = document.querySelector("header");
+
+function atualizarHeader() {
+    if (!header) return;
+    if (window.scrollY === 0) {
+        header.classList.add("transparente");
+    } else {
+        header.classList.remove("transparente");
+    }
+}
+
+window.addEventListener("scroll", atualizarHeader);
+atualizarHeader();
+
 /* ==========================================================================
    MENU HAMBÚRGUER
    ========================================================================== */
@@ -247,3 +264,15 @@ if (formPopup) {
             });
     });
 }
+/* ========== SCROLL REVEAL ========== */
+const revelar = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visivel");
+        }
+    });
+}, { threshold: 0.15 });
+
+revelar.forEach(el => observer.observe(el));

@@ -11,7 +11,7 @@
    BASE
    ========================================================================== */
 body {
-    padding-top: 60px;
+    padding-top: 0px;
     font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
 }
@@ -104,7 +104,14 @@ header {
     height: 60px;
     background-color: #2F2A2A;
     z-index: 100;
+    transition: background-color 0.2s ease;
+
 }
+header.transparente {
+    background-color: transparent;
+    box-shadow: none;
+}
+
 
 .cabecalho {
     max-width: 1350px;
@@ -187,6 +194,7 @@ header {
     color: white;
     display: flex;
     align-items: flex-start;
+    padding-top: 60px;
 }
 
 .heroContent {
@@ -769,7 +777,7 @@ header {
 .proposta-container {
     margin: auto;
     padding: 30px 0;
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -915,6 +923,13 @@ header {
 
 .blog-card-unitario:hover .blog-card-titulo {
     color: #008CC4;
+}
+.blog-proposta {
+    padding: 0 0 20px;
+}
+.blog-proposta-container {
+    max-width: 1350px;
+    padding: 30px 80px;
 }
 
 /* ==========================================================================
@@ -1267,7 +1282,25 @@ footer {
     flex-direction: column;
     gap: 10px;
 }
+/* ========== SCROLL REVEAL ========== */
+.reveal {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
 
+.reveal.from-right {
+    transform: translateX(60px);
+}
+
+.reveal.from-bottom {
+    transform: translateY(40px);
+}
+
+.reveal.visivel {
+    opacity: 1;
+    transform: translate(0);
+}
 /* ==========================================================================
    RESPONSIVIDADE
    ========================================================================== */
@@ -1278,8 +1311,8 @@ footer {
         height: 50px;
     }
 
-    body {
-        padding-top: 50px;
+    .hero {
+    padding-top: 50px;
     }
 
     #btnsHeader {
@@ -1468,7 +1501,9 @@ footer {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-
+    .blog-proposta-container {
+    padding: 30px 30px;
+}
     /* Proposta */
     .proposta-texto {
         padding: 50px 30px;
@@ -1686,7 +1721,9 @@ footer {
     .blog-container-imagem {
         height: 160px;
     }
-
+    .blog-proposta-container {
+    padding: 20px 16px;
+}
     /* Contato */
     .contato-form-grid {
         grid-template-columns: 1fr;
