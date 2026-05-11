@@ -491,7 +491,7 @@ header.transparente {
     margin: auto;
 }
 
-.cards {
+.cards { 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -500,25 +500,30 @@ header.transparente {
     width: 100%;
 }
 
+/* CARD */
 .card {
     width: 100%;
     min-width: 0;
-    transition: transform 0.5s ease;
 }
 
+/* CONTAINER */
 .card-container {
     width: 100%;
-    height: 100%;
     padding: 30px 35px;
     border-radius: 10px 8px;
     border: 1px solid transparent;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.370);
     background-color: white;
+
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    height: 400px;
+    position: relative;
 }
 
+/* HOVER */
 .card:hover {
     transform: translateY(-5px);
 }
@@ -526,14 +531,15 @@ header.transparente {
 .card:hover .card-container {
     border-color: #00C4FF;
 }
-
 .card-imagem {
     max-width: 55px;
+    width: 100%;
     background-color: rgba(209, 208, 208, 0.411);
     padding: 8px;
     border-radius: 10px;
 }
 
+/* CONTROLAR TEXTO */
 .card-titulo {
     font-size: 18px;
     color: #0B151E;
@@ -543,16 +549,65 @@ header.transparente {
     font-size: 15px;
     color: #6d6d6d;
 }
+.card-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+}
 
+/* CONTEÚDO EXTRA */
+.card-extra {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+
+    height: 100%;          
+    overflow-y: auto;
+
+    padding-top: 20px;       
+}
+
+/* QUANDO ATIVO */
+.card.ativo .card-conteudo {
+    display: none;
+}
+
+.card.ativo .card-extra {
+    display: flex;
+}
+
+.card-extra p{
+    font-size: 15px;
+    color: #6d6d6d;
+}
+
+/* BOTÕES */
 .card-btn {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     flex-direction: column;
     margin-top: auto;
 }
 
+/* BOTÃO VOLTAR */
+.card-voltar {
+    margin-top: auto;
+    background: transparent;
+    border: 1px solid #00C4FF;
+    color: #008CC4;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card-voltar:hover {
+    background-color: #00C4FF;
+    color: white;
+}
+
 .card-btn-proposta,
-.card-btn-saiba {
+.card-btn-saiba,.card-voltar {
     color: #008CC4;
     background-color: transparent;
     border: none;
@@ -562,7 +617,7 @@ header.transparente {
 }
 
 .card-btn-proposta:hover,
-.card-btn-saiba:hover {
+.card-btn-saiba:hover, .card-voltar:hover {
     padding: 7px;
     border: 1px solid #00C4FF;
     background-color: #0079B1;
@@ -573,18 +628,18 @@ header.transparente {
 /* ==========================================================================
    PORTFÓLIO
    ========================================================================== */
-.portifolio {
+.portfolio {
     padding: 100px 0;
 }
 
-.portifolio-container {
+.portfolio-container {
     margin: auto;
     display: flex;
     flex-direction: column;
     gap: 70px;
 }
 
-.portifolio-grid {
+.portfolio-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
@@ -593,14 +648,14 @@ header.transparente {
     margin: 40px auto;
 }
 
-.portifolio-imagem {
+.portfolio-imagem {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
     border: 1px solid transparent;
 }
 
-.portifolio-imagem img {
+.portfolio-imagem img {
     width: 100%;
     height: 100%;
     aspect-ratio: 16/10;
@@ -639,7 +694,7 @@ header.transparente {
     border: 1px solid #00C4FF;
 }
 
-.portifolio-imagem::after {
+.portfolio-imagem::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -649,20 +704,20 @@ header.transparente {
     z-index: 1;
 }
 
-.portifolio-imagem:hover::after {
+.portfolio-imagem:hover::after {
     opacity: 1;
 }
 
-.portifolio-imagem:hover img {
+.portfolio-imagem:hover img {
     transform: scale(1.08);
 }
 
-.portifolio-imagem:hover .overlay-texto {
+.portfolio-imagem:hover .overlay-texto {
     opacity: 1;
     transform: translateY(0);
 }
 
-.portifolio-enviar {
+.portfolio-enviar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -677,18 +732,18 @@ header.transparente {
     transition: transform 0.5s ease;
 }
 
-.portifolio-enviar:hover {
+.portfolio-enviar:hover {
     transform: translateY(-3px);
 }
 
-.portifolio-enviar-img {
+.portfolio-enviar-img {
     display: flex;
     justify-content: center;
     max-width: 25px;
     border-radius: 10px;
 }
 
-.portifolio-enviar-texto {
+.portfolio-enviar-texto {
     color: white;
     font-weight: 600;
 }
@@ -1166,6 +1221,7 @@ footer {
     color: white;
     display: flex;
     align-items: flex-start;
+    padding-top: 60px;
 }
 
 .container-hero-blog {
@@ -1331,7 +1387,7 @@ footer {
         width: 70%;
     }
 
-    .portifolio-grid {
+    .portfolio-grid {
         gap: 15px;
     }
 
@@ -1488,7 +1544,7 @@ footer {
     }
 
     /* Portfólio */
-    .portifolio-grid {
+    .portfolio-grid {
         grid-template-columns: 1fr;
     }
 
@@ -1645,7 +1701,7 @@ footer {
     .QuemSomos,
     .mapa,
     .servicos,
-    .portifolio,
+    .portfolio,
     .blog,
     .contato {
         padding: 60px 0;
@@ -1673,14 +1729,30 @@ footer {
     .cards {
         grid-template-columns: 1fr;
     }
+    .card-container {
+        min-height: 320px; /* ajusta aqui conforme o tamanho ideal */
+    }
+    .card-extra {
+        height: 100%;
+    }
+
+    .card-voltar {
+        margin-top: auto;
+    }
+    .card-desc,
+    .card-extra p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
 
     /* Portfólio */
-    .portifolio-grid {
+    .portfolio-grid {
         grid-template-columns: 1fr;
         margin: 20px auto;
     }
 
-    .portifolio-enviar {
+    .portfolio-enviar {
         margin: 0 auto 30px;
     }
 
@@ -1768,6 +1840,7 @@ footer {
     /* Blog interno */
     .hero-blog {
         min-height: 35vh;
+        padding-top: 50px;
     }
 
     .heroContent-blog h1 {

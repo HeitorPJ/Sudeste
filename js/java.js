@@ -84,7 +84,7 @@ function voltarAoTopo() { window.scrollTo({ top: 0, behavior: "smooth" }); fecha
 function IrClientes() { navegarPara("clientes"); }
 function IrQuemSomos() { navegarPara("QuemSomos"); }
 function IrServicos() { navegarPara("servicos"); }
-function IrPortifolio() { navegarPara("portifolio"); }
+function IrPortfolio() { navegarPara("portfolio"); }
 function IrBlog() { navegarPara("blog"); }
 function IrContato() { navegarPara("contato"); }
 
@@ -276,3 +276,24 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 
 revelar.forEach(el => observer.observe(el));
+
+/* ========== CARDS - SAIBA MAIS ========== */
+// abrir
+document.querySelectorAll(".card-btn-saiba").forEach(botao => {
+    botao.addEventListener("click", () => {
+        const card = botao.closest(".card");
+
+        // fecha todos
+        document.querySelectorAll(".card").forEach(c => c.classList.remove("ativo"));
+
+        // abre só o clicado
+        card.classList.add("ativo");
+    });
+});
+
+// fechar
+document.querySelectorAll(".card-voltar").forEach(botao => {
+    botao.addEventListener("click", () => {
+        botao.closest(".card").classList.remove("ativo");
+    });
+});
