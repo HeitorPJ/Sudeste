@@ -101,6 +101,15 @@ if (carouselTrack && carouselSlides.length > 0) {
         carouselTrack.style.transform = `translateX(-${carouselIndex * 100}%)`;
     }
 
+    let autoPlay;
+    function iniciarAutoPlay() {
+        clearInterval(autoPlay);
+        autoPlay = setInterval(() => {
+            carouselIndex = (carouselIndex + 1) % carouselSlides.length;
+            atualizarCarousel();
+        }, 5000);
+    }
+
     const btnNext = document.querySelector(".next");
     const btnPrev = document.querySelector(".prev");
 
@@ -108,6 +117,7 @@ if (carouselTrack && carouselSlides.length > 0) {
         btnNext.addEventListener("click", () => {
             carouselIndex = (carouselIndex + 1) % carouselSlides.length;
             atualizarCarousel();
+            iniciarAutoPlay();
         });
     }
 
@@ -115,8 +125,11 @@ if (carouselTrack && carouselSlides.length > 0) {
         btnPrev.addEventListener("click", () => {
             carouselIndex = (carouselIndex - 1 + carouselSlides.length) % carouselSlides.length;
             atualizarCarousel();
+            iniciarAutoPlay();
         });
     }
+
+    iniciarAutoPlay();
 }
 
 /* ==========================================================================
