@@ -207,9 +207,9 @@ header.transparente {
    ========================================================================== */
 .hero {
     min-height: 100vh;
-    background-image: linear-gradient(to right, rgba(0, 30, 60, 0.836), rgba(0, 30, 60, 0.589)), url('../IMG/imagem1.jpg');
+    background-image: linear-gradient(to right, rgba(0, 30, 60, 0.836), rgba(0, 30, 60, 0.589)), url('../IMG/hero-img.jpg');
     background-size: cover;
-    background-position: center;
+    background-position:10% 10% ;
     color: white;
     display: flex;
     align-items: flex-start;
@@ -817,7 +817,7 @@ header.transparente {
 .popup-box button {
     padding: 15px;
     border: none;
-    background: #00B1EA;
+    background: #018AB0;
     color: white;
     border-radius: 8px;
     cursor: pointer;
@@ -895,6 +895,7 @@ header.transparente {
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    border: none;
 }
 
 /* ==========================================================================
@@ -1347,6 +1348,17 @@ footer {
 .blog-pagina-texto li::marker {
     color: #008CC4;
 }
+.blog-proposta {
+    padding: 0 0 20px;
+    display: flex;
+    justify-content: center;
+}
+.blog-proposta-container {
+    max-width: 1350px;
+    width: 100%;
+    padding: 30px 80px;
+    
+}
 
 .footer-geral-blog {
     display: flex;
@@ -1695,7 +1707,7 @@ footer {
     /* Hero */
     #hero-SubTitulo {
         font-size: 10px;
-        max-width: 195px;
+        max-width: 200px;
     }
 
     .heroContent h1 {

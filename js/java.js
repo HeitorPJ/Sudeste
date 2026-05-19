@@ -86,8 +86,14 @@ function IrQuemSomos() { navegarPara("QuemSomos"); }
 function IrServicos() { navegarPara("servicos"); }
 function IrPortfolio() { navegarPara("portfolio"); }
 function IrBlog() { navegarPara("blog"); }
-function IrContato() { navegarPara("contato"); }
+function IrContato(servico = "") {
+    navegarPara("contato");
 
+    if (servico) {
+        const select = document.querySelector('[name="servico"]');
+        if (select) select.value = servico;
+    }
+}
 /* ==========================================================================
    CAROUSEL
    ========================================================================== */
@@ -107,7 +113,7 @@ if (carouselTrack && carouselSlides.length > 0) {
         autoPlay = setInterval(() => {
             carouselIndex = (carouselIndex + 1) % carouselSlides.length;
             atualizarCarousel();
-        }, 5000);
+        }, 4000);
     }
 
     const btnNext = document.querySelector(".next");
@@ -166,6 +172,16 @@ if (document.getElementById("mapa-imagem")) {
     });
 }
 
+/* ==========================================================================
+   CARDS - SOLICITAR PROPOSTA
+   ========================================================================== */
+
+document.querySelectorAll(".card-btn-proposta").forEach(botao => {
+    botao.addEventListener("click", () => {
+        const titulo = botao.closest(".card").querySelector(".card-titulo").textContent;
+        IrContato(titulo);
+    });
+});
 /* ==========================================================================
    POPUP - RECEBER PORTFÓLIO
    ========================================================================== */
