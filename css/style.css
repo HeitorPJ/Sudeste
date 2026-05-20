@@ -1088,6 +1088,11 @@ header.transparente {
     color: white;
     font-size: 13px;
 }
+.contato-item-p a {
+    color: white;
+    text-decoration: none;
+    pointer-events: none;
+}
 
 .contato-form {
     width: 60%;
@@ -1240,9 +1245,9 @@ footer {
 
 .hero-blog {
     min-height: 45vh;
-    background-image: linear-gradient(to right, rgba(0, 30, 60, 0.836), rgba(0, 30, 60, 0.589)), url('../IMG/imagem1.jpg');
+    background-image: linear-gradient(to right, rgba(0, 30, 60, 0.836), rgba(0, 30, 60, 0.589)), url('../IMG/hero-img.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center 10%;
     color: white;
     display: flex;
     align-items: flex-start;

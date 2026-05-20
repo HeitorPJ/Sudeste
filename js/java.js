@@ -98,46 +98,45 @@ function IrContato(servico = "") {
    CAROUSEL
    ========================================================================== */
 const carouselTrack = document.querySelector(".carousel-track");
-const carouselSlides = document.querySelectorAll(".carousel-track img");
+const slidesOriginais = Array.from(document.querySelectorAll(".carousel-track img"));
 
-if (carouselTrack && carouselSlides.length > 0) {
-    let carouselIndex = 0;
+if (carouselTrack && slidesOriginais.length > 0) {
+    // Clona primeiro e último
+    const primeiro = slidesOriginais[0].cloneNode(true);
+    const ultimo = slidesOriginais[slidesOriginais.length - 1].cloneNode(true);
 
-    function atualizarCarousel() {
-        carouselTrack.style.transform = `translateX(-${carouselIndex * 100}%)`;
+    carouselTrack.appendChild(primeiro);
+    carouselTrack.insertBefore(ultimo, slidesOriginais[0]);
+
+    const slides = document.querySelectorAll(".carousel-track img");
+    let index = 1; // começa no 1 pois o 0 é o clone do último
+
+    function irPara(i, animado = true) {
+        carouselTrack.style.transition = animado ? "transform 0.5s ease" : "none";
+        carouselTrack.style.transform = `translateX(-${i * 100}%)`;
+        index = i;
     }
 
-    let autoPlay;
-    function iniciarAutoPlay() {
+    // Posiciona sem animação no início
+    irPara(1, false);
+
+    carouselTrack.addEventListener("transitionend", () => {
+        if (index === 0) irPara(slides.length - 2, false);
+        if (index === slides.length - 1) irPara(1, false);
+    });
+
+    function proximo() { irPara(index + 1); }
+    function anterior() { irPara(index - 1); }
+
+    document.querySelector(".next")?.addEventListener("click", () => { proximo(); reiniciarAutoPlay(); });
+    document.querySelector(".prev")?.addEventListener("click", () => { anterior(); reiniciarAutoPlay(); });
+
+    let autoPlay = setInterval(proximo, 4000);
+    function reiniciarAutoPlay() {
         clearInterval(autoPlay);
-        autoPlay = setInterval(() => {
-            carouselIndex = (carouselIndex + 1) % carouselSlides.length;
-            atualizarCarousel();
-        }, 4000);
+        autoPlay = setInterval(proximo, 4000);
     }
-
-    const btnNext = document.querySelector(".next");
-    const btnPrev = document.querySelector(".prev");
-
-    if (btnNext) {
-        btnNext.addEventListener("click", () => {
-            carouselIndex = (carouselIndex + 1) % carouselSlides.length;
-            atualizarCarousel();
-            iniciarAutoPlay();
-        });
-    }
-
-    if (btnPrev) {
-        btnPrev.addEventListener("click", () => {
-            carouselIndex = (carouselIndex - 1 + carouselSlides.length) % carouselSlides.length;
-            atualizarCarousel();
-            iniciarAutoPlay();
-        });
-    }
-
-    iniciarAutoPlay();
 }
-
 /* ==========================================================================
    MAPA (Leaflet)
    ========================================================================== */
@@ -152,24 +151,48 @@ if (document.getElementById("mapa-imagem")) {
     }).addTo(map);
 
     const locais = [
-        { nome: "Vitória - ES", coords: [-20.315357, -40.337874] },
-        { nome: "São Paulo - SP", coords: [-23.5505, -46.6333] },
-        { nome: "BH - MG", coords: [-19.9167, -43.9345] },
-        { nome: "Belém - PA", coords: [-1.449461, -48.492891] },
-        { nome: "Brasília - DF", coords: [-15.777537, -47.897793] },
+        { nome: "Atuação em projetos técnicos ambientais e geológicos. - MG", coords: [-19.9167, -43.9345], tipo: "grande" },
+        { nome: "Atuação em estudos técnicos e consultoria ambiental. - RJ", coords: [-22.9068, -43.1729], tipo: "grande" },
+        { nome: "Atuação em projetos ambientais e geológicos. - BA", coords: [-12.9714, -38.5014], tipo: "grande" },
+        { nome: "Atuação em projetos de geofísica aplicada. - RS", coords: [-30.0346, -51.2177], tipo: "grande" },
+        { nome: "Atuação em consultoria ambiental e estudos técnicos. - GO", coords: [-16.6864, -49.2643], tipo: "grande" },
+
+        // Espírito Santo — ícone pequeno
+
+        { nome: "Vitória - ES", coords: [-20.3155, -40.3128], tipo: "pequeno" },
+        { nome: "Serra - ES", coords: [-20.1286, -40.3072], tipo: "pequeno" },
+        { nome: "Cariacica - ES", coords: [-20.2642897, -40.430602], tipo: "pequeno" },
+        { nome: "Linhares - ES", coords: [-19.3912, -40.0647], tipo: "pequeno" },
+        { nome: "São Mateus - ES", coords: [-18.7157, -39.8592], tipo: "pequeno" },
+        { nome: "Aracruz - ES", coords: [-19.8215944, -40.3078049], tipo: "pequeno" },
+        { nome: "Fundão - ES", coords: [-19.9330917, -40.423408], tipo: "pequeno" },
+        { nome: "Itapemirim - ES", coords: [-21.0103, -40.8325], tipo: "pequeno" },
+        { nome: "Santa Leopoldina - ES", coords: [-20.0996401, -40.5520932], tipo: "pequeno" },
+        { nome: "Conceição da Barra - ES", coords: [-18.5831473, -39.7443488], tipo: "pequeno" },
+        { nome: "Jaguaré - ES", coords: [-18.9096309, -40.0818343], tipo: "pequeno" },
     ];
 
-    const iconeAzul = L.icon({
-        iconUrl: "IMG/map-marker.svg",
-        iconSize: [40, 40],
-        iconAnchor: [20, 40],
-    });
+    const iconeGrande = L.icon({ iconUrl: "IMG/map-marker.svg", iconSize: [40, 40], iconAnchor: [20, 40] });
+    const iconePequeno = L.icon({ iconUrl: "IMG/map-marker.svg", iconSize: [18, 18], iconAnchor: [9, 18] });
 
-    locais.forEach(({ nome, coords }) => {
-        L.marker(coords, { icon: iconeAzul })
+    locais.forEach(({ nome, coords, tipo }) => {
+    if (tipo === "grande") {
+        L.marker(coords, { icon: iconeGrande })
             .addTo(map)
             .bindPopup(`<b>${nome}</b>`);
-    });
+    } else {
+        L.circleMarker(coords, {
+            radius: 6,
+            fillColor: "#009ED7",
+            color: "#006fa3",
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 0.8,
+        })
+        .addTo(map)
+        .bindPopup(`<b>${nome}</b>`);
+    }
+});
 }
 
 /* ==========================================================================
