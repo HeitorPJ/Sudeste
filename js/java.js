@@ -176,11 +176,6 @@ if (document.getElementById("mapa-imagem")) {
     const iconePequeno = L.icon({ iconUrl: "IMG/map-marker.svg", iconSize: [18, 18], iconAnchor: [9, 18] });
 
     locais.forEach(({ nome, coords, tipo }) => {
-    if (tipo === "grande") {
-        L.marker(coords, { icon: iconeGrande })
-            .addTo(map)
-            .bindPopup(`<b>${nome}</b>`);
-    } else {
         L.circleMarker(coords, {
             radius: 6,
             fillColor: "#009ED7",
@@ -191,7 +186,6 @@ if (document.getElementById("mapa-imagem")) {
         })
         .addTo(map)
         .bindPopup(`<b>${nome}</b>`);
-    }
 });
 }
 
