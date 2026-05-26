@@ -131,10 +131,10 @@ if (carouselTrack && slidesOriginais.length > 0) {
     document.querySelector(".next")?.addEventListener("click", () => { proximo(); reiniciarAutoPlay(); });
     document.querySelector(".prev")?.addEventListener("click", () => { anterior(); reiniciarAutoPlay(); });
 
-    let autoPlay = setInterval(proximo, 4000);
+    let autoPlay = setInterval(proximo, 5000);
     function reiniciarAutoPlay() {
         clearInterval(autoPlay);
-        autoPlay = setInterval(proximo, 4000);
+        autoPlay = setInterval(proximo, 5000);
     }
 }
 /* ==========================================================================
