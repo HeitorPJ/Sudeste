@@ -178,8 +178,8 @@ if (document.getElementById("mapa-imagem")) {
     locais.forEach(({ nome, coords, tipo }) => {
         L.circleMarker(coords, {
             radius: 6,
-            fillColor: "#009ED7",
-            color: "#006fa3",
+            fillColor: "#00C4FF",
+            color: "#005e79",
             weight: 1,
             opacity: 1,
             fillOpacity: 0.8,
