@@ -101,7 +101,6 @@ const carouselTrack = document.querySelector(".carousel-track");
 const slidesOriginais = Array.from(document.querySelectorAll(".carousel-track img"));
 
 if (carouselTrack && slidesOriginais.length > 0) {
-    // Clona primeiro e último
     const primeiro = slidesOriginais[0].cloneNode(true);
     const ultimo = slidesOriginais[slidesOriginais.length - 1].cloneNode(true);
 
@@ -109,18 +108,23 @@ if (carouselTrack && slidesOriginais.length > 0) {
     carouselTrack.insertBefore(ultimo, slidesOriginais[0]);
 
     const slides = document.querySelectorAll(".carousel-track img");
-    let index = 1; // começa no 1 pois o 0 é o clone do último
+    let index = 1;
+    let emTransicao = false; 
 
     function irPara(i, animado = true) {
+        if (emTransicao && animado) return; 
+        emTransicao = animado;
         carouselTrack.style.transition = animado ? "transform 0.5s ease" : "none";
         carouselTrack.style.transform = `translateX(-${i * 100}%)`;
         index = i;
+        if (!animado) emTransicao = false; 
     }
 
-    // Posiciona sem animação no início
     irPara(1, false);
 
-    carouselTrack.addEventListener("transitionend", () => {
+    carouselTrack.addEventListener("transitionend", (e) => {
+        if (e.propertyName !== "transform") return;
+        emTransicao = false; //
         if (index === 0) irPara(slides.length - 2, false);
         if (index === slides.length - 1) irPara(1, false);
     });
