@@ -157,7 +157,6 @@ if (document.getElementById("mapa-imagem")) {
         { nome: "Atuação em projetos de geofísica aplicada. - RS", coords: [-30.0346, -51.2177], tipo: "grande" },
         { nome: "Atuação em consultoria ambiental e estudos técnicos. - GO", coords: [-16.6864, -49.2643], tipo: "grande" },
 
-        // Espírito Santo — ícone pequeno
 
         { nome: "Vitória - ES", coords: [-20.3155, -40.3128], tipo: "pequeno" },
         { nome: "Serra - ES", coords: [-20.1286, -40.3072], tipo: "pequeno" },
@@ -172,13 +171,11 @@ if (document.getElementById("mapa-imagem")) {
         { nome: "Jaguaré - ES", coords: [-18.9096309, -40.0818343], tipo: "pequeno" },
     ];
 
-    const iconeGrande = L.icon({ iconUrl: "IMG/map-marker.svg", iconSize: [40, 40], iconAnchor: [20, 40] });
-    const iconePequeno = L.icon({ iconUrl: "IMG/map-marker.svg", iconSize: [18, 18], iconAnchor: [9, 18] });
 
     locais.forEach(({ nome, coords, tipo }) => {
         L.circleMarker(coords, {
             radius: 6,
-            fillColor: "#00C4FF",
+            fillColor: "#00c3ffc0",
             color: "#005e79",
             weight: 1,
             opacity: 1,
@@ -188,11 +185,29 @@ if (document.getElementById("mapa-imagem")) {
         .bindPopup(`<b>${nome}</b>`);
 });
 }
+/* ==========================================================================
+   POPUP - CARDS DE SERVIÇO
+   ========================================================================== */
+function abrirPopupCard(id) {
+    const popup = document.getElementById(id);
+    if (popup) popup.classList.add("ativo");
+}
+
+function fecharPopupCard(id) {
+    const popup = document.getElementById(id);
+    if (popup) popup.classList.remove("ativo");
+}
+
+// Fechar ao clicar fora
+document.querySelectorAll(".popup-card").forEach(popup => {
+    popup.addEventListener("click", (e) => {
+        if (e.target === popup) fecharPopupCard(popup.id);
+    });
+});
 
 /* ==========================================================================
    CARDS - SOLICITAR PROPOSTA
    ========================================================================== */
-
 document.querySelectorAll(".card-btn-proposta").forEach(botao => {
     botao.addEventListener("click", () => {
         const titulo = botao.closest(".card").querySelector(".card-titulo").textContent;

@@ -14,7 +14,8 @@ html,
 body {
     overflow-x: hidden;
 }
-   body {
+
+body {
     padding-top: 0px;
     font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
@@ -126,6 +127,7 @@ header {
     transition: background-color 0.2s ease;
 
 }
+
 header.transparente {
     background-color: transparent;
     box-shadow: none;
@@ -209,7 +211,7 @@ header.transparente {
     min-height: 100vh;
     background-image: linear-gradient(to right, rgba(0, 30, 60, 0.836), rgba(0, 30, 60, 0.589)), url('../IMG/hero-img.jpg');
     background-size: cover;
-    background-position:10% 10% ;
+    background-position: 10% 10%;
     color: white;
     display: flex;
     align-items: flex-start;
@@ -362,11 +364,11 @@ header.transparente {
     width: 100%;
     min-width: 100%;
     height: 100%;
-    object-fit: contain; 
+    object-fit: contain;
     object-position: center;
     display: block;
     padding: 80px 300px;
-    background-color:white
+    background-color: white
 }
 
 
@@ -515,7 +517,7 @@ header.transparente {
     margin: auto;
 }
 
-.cards { 
+.cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -555,6 +557,7 @@ header.transparente {
 .card:hover .card-container {
     border-color: #00C4FF;
 }
+
 .card-imagem {
     max-width: 55px;
     width: 100%;
@@ -573,6 +576,7 @@ header.transparente {
     font-size: 15px;
     color: #6d6d6d;
 }
+
 .card-conteudo {
     display: flex;
     flex-direction: column;
@@ -586,24 +590,42 @@ header.transparente {
     flex-direction: column;
     gap: 15px;
 
-    height: 100%;          
+    height: 100%;
     overflow-y: auto;
 
-    padding-top: 20px;       
+    padding-top: 20px;
 }
 
 /* QUANDO ATIVO */
-.card.ativo .card-conteudo {
-    display: none;
-}
-
-.card.ativo .card-extra {
+.popup-card {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
     display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+    z-index: 999;
+    line-height: 25px;
+    font-weight: 500;
+    overflow: auto;
+}
+li::marker {
+    color: #008CC4;
+}
+.li-sec{
+    margin-left:20px;
 }
 
-.card-extra p{
-    font-size: 15px;
-    color: #6d6d6d;
+.popup-card.ativo {
+    opacity: 1;
+    pointer-events: all;
+    
 }
 
 /* BOTÕES */
@@ -613,6 +635,7 @@ header.transparente {
     flex-direction: column;
     margin-top: auto;
 }
+
 
 /* BOTÃO VOLTAR */
 .card-voltar {
@@ -630,8 +653,18 @@ header.transparente {
     color: white;
 }
 
+.card-btn-saiba-container {
+    display: flex;
+    justify-content: center;
+}
+
+.card-btn-saiba {
+    width: 100%;
+}
+
 .card-btn-proposta,
-.card-btn-saiba,.card-voltar {
+.card-btn-saiba,
+.card-voltar {
     color: #008CC4;
     background-color: transparent;
     border: none;
@@ -641,7 +674,8 @@ header.transparente {
 }
 
 .card-btn-proposta:hover,
-.card-btn-saiba:hover, .card-voltar:hover {
+.card-btn-saiba:hover,
+.card-voltar:hover {
     padding: 7px;
     border: 1px solid #00C4FF;
     background-color: #0079B1;
@@ -801,7 +835,9 @@ header.transparente {
     padding: 30px;
     border-radius: 12px;
     width: 90%;
-    max-width: 400px;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -1004,9 +1040,11 @@ header.transparente {
 .blog-card-unitario:hover .blog-card-titulo {
     color: #008CC4;
 }
+
 .blog-proposta {
     padding: 0 0 20px;
 }
+
 .blog-proposta-container {
     max-width: 1350px;
     padding: 30px 80px;
@@ -1088,6 +1126,7 @@ header.transparente {
     color: white;
     font-size: 13px;
 }
+
 .contato-item-p a {
     color: white;
     text-decoration: none;
@@ -1353,16 +1392,18 @@ footer {
 .blog-pagina-texto li::marker {
     color: #008CC4;
 }
+
 .blog-proposta {
     padding: 0 0 20px;
     display: flex;
     justify-content: center;
 }
+
 .blog-proposta-container {
     max-width: 1350px;
     width: 100%;
     padding: 30px 80px;
-    
+
 }
 
 .footer-geral-blog {
@@ -1379,6 +1420,7 @@ footer {
     flex-direction: column;
     gap: 10px;
 }
+
 /* ========== SCROLL REVEAL ========== */
 .reveal {
     opacity: 0;
@@ -1400,7 +1442,7 @@ footer {
 }
 
 
-#img-whatsapp{
+#img-whatsapp {
     position: fixed;
     bottom: 25px;
     right: 25px;
@@ -1419,13 +1461,16 @@ footer {
     transition: transform 0.3s ease;
 
 }
+
 #img-whatsapp:hover {
     transform: scale(1.1);
 }
-#img-whatsapp img{
+
+#img-whatsapp img {
     width: 30px;
     height: 30px;
 }
+
 /* ==========================================================================
    RESPONSIVIDADE
    ========================================================================== */
@@ -1437,7 +1482,7 @@ footer {
     }
 
     .hero {
-    padding-top: 50px;
+        padding-top: 50px;
     }
 
     #btnsHeader {
@@ -1512,7 +1557,7 @@ footer {
     .blog-pagina-container {
         padding: 0 30px;
     }
-    
+
     .secao-fundo::before {
         left: -30px;
         right: -30px;
@@ -1637,9 +1682,11 @@ footer {
         grid-template-columns: 1fr;
         gap: 20px;
     }
+
     .blog-proposta-container {
-    padding: 30px 30px;
-}
+        padding: 30px 30px;
+    }
+
     /* Proposta */
     .proposta-texto {
         padding: 50px 30px;
@@ -1704,6 +1751,7 @@ footer {
     .blog-pagina-container {
         padding: 0 16px;
     }
+
     .secao-fundo::before {
         left: -16px;
         right: -16px;
@@ -1817,9 +1865,12 @@ footer {
     .cards {
         grid-template-columns: 1fr;
     }
+
     .card-container {
-        min-height: 320px; /* ajusta aqui conforme o tamanho ideal */
+        min-height: 320px;
+        /* ajusta aqui conforme o tamanho ideal */
     }
+
     .card-extra {
         height: 100%;
     }
@@ -1827,6 +1878,7 @@ footer {
     .card-voltar {
         margin-top: auto;
     }
+
     .card-desc,
     .card-extra p {
         font-size: 14px;
@@ -1865,7 +1917,7 @@ footer {
     }
 
     .proposta-container {
-        padding: 20px 16px;
+        padding: 20px 0;
     }
 
     /* Blog home */
@@ -1881,9 +1933,11 @@ footer {
     .blog-container-imagem {
         height: 160px;
     }
+
     .blog-proposta-container {
-    padding: 20px 16px;
-}
+        padding: 20px 16px;
+    }
+
     /* Contato */
     .contato-form-grid {
         grid-template-columns: 1fr;
@@ -1953,7 +2007,7 @@ footer {
     .blog-pagina-texto li {
         font-size: 15px;
     }
-    
+
     #img-whatsapp {
         width: 48px;
         height: 48px;
