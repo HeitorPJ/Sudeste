@@ -618,8 +618,9 @@ header.transparente {
 li::marker {
     color: #008CC4;
 }
-.li-sec{
-    margin-left:20px;
+
+.popup-box ul{
+    margin-left: 20px;
 }
 
 .popup-card.ativo {
