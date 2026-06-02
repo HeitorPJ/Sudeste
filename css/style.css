@@ -329,7 +329,7 @@ header.transparente {
    CLIENTES
    ========================================================================== */
 .clientes {
-    padding: 100px 0;
+    padding: 100px 0 0 75px;
 }
 
 .clientes-container {
@@ -390,7 +390,7 @@ header.transparente {
    QUEM SOMOS
    ========================================================================== */
 .QuemSomos {
-    padding: 100px 0;
+    padding: 75px 0;
 }
 
 .QuemSomos-container {
@@ -486,7 +486,7 @@ header.transparente {
    MAPA
    ========================================================================== */
 .mapa {
-    padding: 100px 0;
+    padding: 75px 0;
 }
 
 .mapa-container {
@@ -507,7 +507,7 @@ header.transparente {
    SERVIÇOS
    ========================================================================== */
 .servicos {
-    padding: 100px 0;
+    padding: 75px 0;
 }
 
 .servicos-container {
@@ -688,7 +688,7 @@ li::marker {
    PORTFÓLIO
    ========================================================================== */
 .portfolio {
-    padding: 100px 0;
+    padding: 75px 0;
 }
 
 .portfolio-container {
@@ -856,7 +856,7 @@ li::marker {
     border: none;
     background: #018AB0;
     color: white;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
 }
 
@@ -941,7 +941,7 @@ li::marker {
    BLOG (home)
    ========================================================================== */
 .blog {
-    padding: 100px 0;
+    padding: 75px 0;
 }
 
 .blog-container {
@@ -1057,7 +1057,7 @@ li::marker {
    CONTATO
    ========================================================================== */
 .contato {
-    padding: 100px 0;
+    padding: 75px 0;
 }
 
 .contato-container {
@@ -1843,7 +1843,7 @@ footer {
     .portfolio,
     .blog,
     .contato {
-        padding: 60px 0;
+        padding: 40px 0;
     }
 
     /* Títulos */
