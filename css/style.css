@@ -856,20 +856,22 @@ li::marker {
     border: none;
     background: #018AB0;
     color: white;
-    border-radius: 8px;
+    border-radius: 6px;
     cursor: pointer;
 }
 
 .popup-close {
-    background: none;
-    border: none;
-    font-size: 20px;
+    background-color: #018AB0;
     cursor: pointer;
     width: 20px;
     height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.popup-close img{
+    width: 20px;
+    height: 20px;
 }
 
 #form-popup {
