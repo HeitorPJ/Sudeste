@@ -329,7 +329,7 @@ header.transparente {
    CLIENTES
    ========================================================================== */
 .clientes {
-    padding: 100px 0 0 75px;
+    padding: 100px 0 0 0px;
 }
 
 .clientes-container {
